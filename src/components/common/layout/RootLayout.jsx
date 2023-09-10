@@ -18,6 +18,7 @@ import Footer4 from "@/components/footer/Footer4";
 import Footer5 from "@/components/footer/Footer5";
 
 const HeaderContent = ({ header, navData }) => {
+  return <Header4 navData={navData} />;
   if (header == "header1") {
     return <Header1 navData={navData} />;
   } else if (header == "header2") {
@@ -25,7 +26,6 @@ const HeaderContent = ({ header, navData }) => {
   } else if (header == "header3") {
     return <Header3 />;
   } else if (header == "header4") {
-    return <Header4 navData={navData} />;
   } else if (header == "header5") {
     return <Header5 />;
   } else if (header == "none") {
@@ -83,12 +83,12 @@ export default function RootLayout({
         </div>
         <Preloader />
         <CursorAnimation cursor1={cursor1} cursor2={cursor2} />
-        <Switcher
+        {/* <Switcher
           setMode={setMode}
           mode={mode}
           cursor1={cursor1}
           cursor2={cursor2}
-        />
+        /> */}
         <ScrollTop />
         <HeaderContent header={header} navData={navData} />
         <div id="smooth-wrapper">
