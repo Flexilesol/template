@@ -9,6 +9,7 @@ import CreativeAgencyTeam from "@/components/team/CreativeAgencyTeam";
 import CreativeAgencyBrand from "@/components/brand/CreativeAgencyBrand";
 import CreativeAgencyBlog from "@/components/blog/CreativeAgencyBlog";
 import CreativeAgencyCTA from "@/components/cta/CreativeAgencyCTA";
+import Service1 from "@/components/service/Service1";
 
 const CreativeAgencyDark = () => {
   return (
@@ -25,7 +26,8 @@ const CreativeAgencyDark = () => {
           <CreativeAgencyService />
           <CreativeAgencyAward />
           <CreativeAgencyPortfolio />
-          <CreativeAgencyTeam />
+          <Service1 />
+          {/* <CreativeAgencyTeam /> */}
           <CreativeAgencyBrand />
           <CreativeAgencyBlog />
           <CreativeAgencyCTA />

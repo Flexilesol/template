@@ -16,6 +16,7 @@
     "bootstrap": "^5.2.3",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
+    "file-loader": "^6.2.0",
     "gsap": "^3.11.5",
     "jquery": "^3.6.4",
     "next": "13.2.4",

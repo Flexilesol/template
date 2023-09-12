@@ -126,7 +126,7 @@ const CreativeAgencyHero = () => {
                   ref={heroThumAnim}
                 >
                   <h1 className="title creative" ref={creativeSection}>
-                    Creative{" "}
+                    Flexile{" "}
                     <span className="solution" ref={solutionSection}>
                       Solution
                     </span>{" "}

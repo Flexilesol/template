@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger, ScrollSmoother, ScrollToPlugin } from "@/plugins";
 import A1 from "../../../public/assets/imgs/home-7/a1.jpg";
-import Video from "../../../public/assets/imgs/home-7/video.jpg";
+import Video from "../../../public/assets/imgs/home-7/video.mp4";
 import Shape4 from "../../../public/assets/imgs/home-7/shape-4.png";
 import Shape5 from "../../../public/assets/imgs/home-7/shape-5.png";
 import A2 from "../../../public/assets/imgs/home-7/a2.jpg";
@@ -23,7 +23,7 @@ const CreativeAgencyAbout = () => {
           normalizeScroll: false,
           ignoreMobileResize: true,
         });
-        gsap.to(".about__img-2 img", {
+        gsap.to(".about__img-2 video", {
           scale: 1.15,
           duration: 1,
           scrollTrigger: {
@@ -41,13 +41,15 @@ const CreativeAgencyAbout = () => {
   return (
     <>
       <div className="video__area about__img-2">
-        <Image
-          priority
+        <video
           style={{ width: "100%", height: "auto" }}
-          src={Video}
           alt="Video Image"
-          data-speed="0.2"
-        />
+          loop={true}
+          autoPlay
+          muted
+        >
+          <source src={Video} />
+        </video>
       </div>
       <section className="about__area-7">
         <div className="container pt-130 pb-110">
