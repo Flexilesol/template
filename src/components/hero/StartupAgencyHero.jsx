@@ -88,13 +88,15 @@ const StartupAgencyHero = () => {
                   Our team always reviews all previous methods with <br />{" "}
                   models, and processes to determined
                 </p>
-                <Link
-                  className="btn-started btn-hover"
-                  href="/contact"
-                  ref={heroAnchor}
-                >
-                  Get Started
-                </Link>
+                <div className="btn_wrapper">
+                  <Link
+                    className="wc-btn-primary btn-hover btn-item"
+                    href="/contact"
+                    ref={heroAnchor}
+                  >
+                    <span></span>Get Started
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
@@ -134,14 +136,14 @@ const StartupAgencyHero = () => {
           src={HeroShape3}
           alt="Star Icon"
         />
-        <Image
+        {/* <Image
           priority
           width={489}
           height={382}
           className="shape-4"
           src={Shape20}
           alt="Star Icon"
-        />
+        /> */}
       </section>
     </>
   );

@@ -10,6 +10,8 @@ import CreativeAgencyBrand from "@/components/brand/CreativeAgencyBrand";
 import CreativeAgencyBlog from "@/components/blog/CreativeAgencyBlog";
 import CreativeAgencyCTA from "@/components/cta/CreativeAgencyCTA";
 import Service1 from "@/components/service/Service1";
+import ServiceElementV2 from "@/components/service/ServiceElementV2";
+import StartupAgencyHero from "@/components/hero/StartupAgencyHero";
 
 const CreativeAgencyDark = () => {
   return (
@@ -21,13 +23,15 @@ const CreativeAgencyDark = () => {
       </Head>
       <main>
         <RootLayout header="header4" footer="footer4" defaultMode="dark">
-          <CreativeAgencyHero />
+          {/* <CreativeAgencyHero /> */}
+          <StartupAgencyHero />
           <CreativeAgencyAbout />
           <CreativeAgencyService />
           <CreativeAgencyAward />
           <CreativeAgencyPortfolio />
-          <Service1 />
+          {/* <Service1 /> */}
           {/* <CreativeAgencyTeam /> */}
+          <ServiceElementV2 />
           <CreativeAgencyBrand />
           <CreativeAgencyBlog />
           <CreativeAgencyCTA />
