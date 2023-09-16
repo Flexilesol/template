@@ -12,6 +12,7 @@ import CreativeAgencyCTA from "@/components/cta/CreativeAgencyCTA";
 import Service1 from "@/components/service/Service1";
 import ServiceElementV2 from "@/components/service/ServiceElementV2";
 import StartupAgencyHero from "@/components/hero/StartupAgencyHero";
+import StartupAgencyService from "@/components/service/StartupAgencyService";
 
 const CreativeAgencyDark = () => {
   return (
@@ -26,7 +27,8 @@ const CreativeAgencyDark = () => {
           {/* <CreativeAgencyHero /> */}
           <StartupAgencyHero />
           <CreativeAgencyAbout />
-          <CreativeAgencyService />
+          {/* <CreativeAgencyService /> */}
+          <StartupAgencyService />
           <CreativeAgencyAward />
           <CreativeAgencyPortfolio />
           {/* <Service1 /> */}

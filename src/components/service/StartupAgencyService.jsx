@@ -2,10 +2,33 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
 import Link from "next/link";
+import MobileIcon from "../../../public/assets/imgs/home-7/Services/mobile.svg";
 import service1 from "../../../public/assets/imgs/service/4/service-1.png";
 import Image from "next/image";
+import { Accordion } from "react-bootstrap";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const CONTENT = [
+  {
+    eventKey: "0",
+    title: "Brand Strategy",
+    number: "01",
+    body: `People know what an FAQ is, so make that your page title. Don’t overcomplicate things by calling it “Good to Know” or “More Info”. Sometimes people put the frequently asked questions section on their Contact page, but you can create your own page and put it right in your website navigation menu or website footer so it’s easy to find. Getting a straight, quick answer to your question is a relief. So keep answers to a short paragraph if you can, less than 100 words. Answer the entire question in the FAQ without linking away to another page`,
+  },
+  {
+    eventKey: "1",
+    title: "Development",
+    number: "02",
+    body: `People know what an FAQ is, so make that your page title. Don’t overcomplicate things by calling it “Good to Know” or “More Info”. Sometimes people put the frequently asked questions section on their Contact page, but you can create your own page and put it right in your website navigation menu or website footer so it’s easy to find. Getting a straight, quick answer to your question is a relief. So keep answers to a short paragraph if you can, less than 100 words. Answer the entire question in the FAQ without linking away to another page`,
+  },
+  {
+    eventKey: "2",
+    title: "UI/UX Design",
+    number: "03",
+    body: `People know what an FAQ is, so make that your page title. Don’t overcomplicate things by calling it “Good to Know” or “More Info”. Sometimes people put the frequently asked questions section on their Contact page, but you can create your own page and put it right in your website navigation menu or website footer so it’s easy to find. Getting a straight, quick answer to your question is a relief. So keep answers to a short paragraph if you can, less than 100 words. Answer the entire question in the FAQ without linking away to another page`,
+  },
+];
 
 const StartupAgencyService = () => {
   useEffect(() => {
@@ -97,7 +120,68 @@ const StartupAgencyService = () => {
                 </div>
               </div>
               <div className="col-xxl-7 col-xl-7 col-lg-6 col-md-6">
-                <div className="service__list-4">
+                <div className="row">
+                  <div className="col-xxl-12">
+                    <div className="faq__list-6">
+                      <Accordion
+                        defaultActiveKey="0"
+                        className="accordion"
+                        id="accordionExample"
+                      >
+                        {[...CONTENT].map((item, i) => (
+                          <Accordion.Item
+                            eventKey={item?.eventKey}
+                            className="accordion-item"
+                            key={item?.eventKey}
+                          >
+                            <Accordion.Header
+                              // className="accordion-header"
+                              className="service__item-4 fade_bottom_2"
+                              id="headingOne"
+                            >
+                              <div className="service__item-number">
+                                <span> {item?.number} </span>
+                              </div>
+                              <div className="service__title-wrapper-4">
+                                <h4 className="service__item-title">
+                                  {item?.title}
+                                </h4>
+                              </div>
+                            </Accordion.Header>
+
+                            <Accordion.Body className="accordion-body">
+                              <p>{item?.body}</p>
+
+                              <div className="accordion-body_tags">
+                                <div className="accordion-body_tags-item">
+                                  <Image
+                                    src={MobileIcon}
+                                    height={32}
+                                    width={30}
+                                  />
+
+                                  <span>Mobile Development</span>
+                                </div>
+
+                                <div className="accordion-body_tags-item">
+                                  <Image
+                                    src={MobileIcon}
+                                    height={32}
+                                    width={30}
+                                  />
+
+                                  <span>Mobile Development</span>
+                                </div>
+                              </div>
+                            </Accordion.Body>
+                          </Accordion.Item>
+                        ))}
+                      </Accordion>
+                    </div>
+                  </div>
+                </div>
+
+                {/* <div className="service__list-4">
                   <div className="service__item-4 fade_bottom_2">
                     <div className="service__item-number">
                       <span>01</span>
@@ -178,7 +262,7 @@ const StartupAgencyService = () => {
                       </Link>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
