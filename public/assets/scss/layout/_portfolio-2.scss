@@ -3,15 +3,13 @@
 /*----------------------------------------*/
 
 :root {
-  --pink-6: #EEE5DC;
+  --pink-6: #eee5dc;
 
-  --purple: #D9DBEB;
-  --purple-2: #CCCEDE;
+  --purple: #d9dbeb;
+  --purple-2: #cccede;
 
-  --green: #81C3A3;
-  --green-2: #DCE4E0;
-
-
+  --green: #81c3a3;
+  --green-2: #dce4e0;
 }
 
 @keyframes wcSpinner {
@@ -27,7 +25,6 @@
 }
 
 .portfolio {
-
   &__hero {
     position: relative;
     padding-bottom: 60px;
@@ -68,7 +65,7 @@
       &.shape-circle {
         position: relative;
         opacity: 0;
-        // update v0.2 
+        // update v0.2
         &::after {
           position: absolute;
           content: "";
@@ -162,7 +159,7 @@
       @media #{$sm} {
         padding-top: 160px;
       }
-      // update v0.2 
+      // update v0.2
       &::after {
         position: absolute;
         content: "";
@@ -483,12 +480,12 @@
 
         @media #{$xxl} {
           max-width: 430px;
-          max-height: 600px
+          max-height: 600px;
         }
 
         @media #{$xl} {
           max-width: 330px;
-          max-height: 450px
+          max-height: 450px;
         }
 
         img {
@@ -514,7 +511,8 @@
       z-index: 9;
       opacity: 0;
 
-      @media #{$md} {}
+      @media #{$md} {
+      }
 
       @media #{$sm} {
         top: 95%;
@@ -600,7 +598,7 @@
         }
       }
     }
-    // update v0.2 full 
+    // update v0.2 full
     &-thumbs {
       height: 100%;
       margin-right: -150px !important;
@@ -626,9 +624,8 @@
         margin-top: 30px;
       }
     }
-
   }
-  // update v0.2 
+  // update v0.2
   &__service {
     background-color: var(--green-2);
     background-image: url(/assets/imgs/shape/17.png);
@@ -654,7 +651,7 @@
         text-indent: 20px;
       }
     }
-    // update v0.2 
+    // update v0.2
     .sec-text {
       background-image: url(/assets/imgs/shape/14.png);
       background-repeat: no-repeat;
@@ -736,11 +733,9 @@
         background: var(--black-2);
         transition: all 0.3s;
         border-radius: 15px 0px 0px 15px;
-
       }
 
       &:hover {
-
         .ps-title,
         ul li {
           color: var(--white);
@@ -828,7 +823,7 @@
 
   &__footer {
     margin-top: 150px;
-    border-top: 1px solid #E2E2E2;
+    border-top: 1px solid #e2e2e2;
 
     @media #{$xl} {
       margin-top: 30px;
@@ -837,14 +832,14 @@
     @media #{$sm} {
       margin-top: 60px;
     }
-    // update v0.2 
+    // update v0.2
     &-area {
-      background-color: #F7F7F7;
+      background-color: #f7f7f7;
       background-image: url(/assets/imgs/shape/18.png);
       background-repeat: no-repeat;
       background-position: top right;
       position: relative;
-      // update v0.2 
+      // update v0.2
       &::after {
         position: absolute;
         content: "";
@@ -869,7 +864,7 @@
           bottom: 100px;
         }
       }
-      // update v0.2 
+      // update v0.2
       &::before {
         position: absolute;
         content: "";
@@ -886,7 +881,7 @@
           bottom: 50px;
         }
       }
-      // update v0.4 
+      // update v0.4
       .pf-btm {
         padding: 10px 0;
       }
@@ -956,7 +951,6 @@
       }
 
       .pf-social {
-
         @media #{$sm} {
           margin-bottom: 40px;
         }
@@ -1040,7 +1034,7 @@
   }
 
   &-section {
-    height: 100vh;
+    // height: 100vh;
 
     @media (max-width: 1300px) {
       height: auto;
@@ -1048,7 +1042,6 @@
   }
 
   &__page {
-
     .wc-btn-dark,
     .contact__text,
     .contact__form,
@@ -1058,7 +1051,6 @@
     }
 
     .swiper-slide-active {
-
       .wc-btn-dark {
         animation: wcfadeUp 1s 0.7s forwards;
       }
@@ -1164,7 +1156,6 @@
       }
     }
 
-
     .wc-btn-dark {
       &:hover {
         color: var(--white);
@@ -1175,10 +1166,8 @@
   }
 }
 
-
 @media (max-width: 1300px) {
   .swiper-slide {
-
     .wc-btn-dark {
       animation: wcfadeUp 1s 0.7s forwards;
     }
@@ -1285,14 +1274,12 @@
   }
 }
 
-
 .menu-text-pp {
   color: var(--black-2);
 }
 
-
 // Circle Pagination
-// update v0.2 
+// update v0.2
 .circle-pagination {
   width: 90px !important;
   bottom: unset !important;

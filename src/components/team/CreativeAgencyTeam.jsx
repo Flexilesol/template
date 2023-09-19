@@ -16,7 +16,7 @@ const CreativeAgencyTeam = () => {
         const contentBox = team_item_7.getBoundingClientRect();
         const dx = event.clientX - contentBox.x;
         const dy = event.clientY - contentBox.y;
-        team_item_7.children[0].children[3].style.transform = `translate(${dx}px, ${dy}px)`;
+        team_item_7.children[0].children[2].style.transform = `translate(${dx}px, ${dy}px)`;
       }
       for (let i = 0; i < team_item_7.length; i++) {
         team_item_7[i].addEventListener("mousemove", (event) => {
@@ -66,7 +66,7 @@ const CreativeAgencyTeam = () => {
   return (
     <>
       <section className="team__area-7">
-        <h2 className="team__title-7 title-anim">Team</h2>
+        <h2 className="team__title-7 title-anim">Industries</h2>
         <div className="container">
           <div className="row">
             <div className="col-xxl-12">
@@ -83,17 +83,26 @@ const CreativeAgencyTeam = () => {
               <div className="team__items-7" ref={teamItemContent}>
                 <Link href="/team-details">
                   <div className="team__item-7 fade_bottom_3">
-                    <div className="team__name-wrap-7">
-                      <p className="tm-serial">01</p>
+                    <div>
+                      <div className="team__name-wrap-7">
+                        <p className="tm-serial">01</p>
 
-                      <h3 className="tm-name">Saymon D. Halk</h3>
+                        <h3 className="tm-name">Saymon D. Halk</h3>
+                      </div>
+
+                      <h4 className="tm-role">
+                        Web Developer Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Tempora soluta error magni dolorem
+                        voluptates accusantium illo numquam at libero quidem
+                        nobis quasi adipisci fuga necessitatibus, quaerat odio
+                        mollitia voluptatem eligendi!
+                      </h4>
                     </div>
-                    <h4 className="tm-role">
-                      Web <br /> Developer
-                    </h4>
+
                     <div className="tm-link">
                       <i className="fa-solid fa-arrow-right"></i>
                     </div>
+
                     <div
                       className="team__hover-7"
                       style={{ backgroundImage: "url(assets/imgs/team/1.jpg)" }}
@@ -103,114 +112,91 @@ const CreativeAgencyTeam = () => {
 
                 <Link href="/team-details">
                   <div className="team__item-7 fade_bottom_3">
-                    <div className="team__name-wrap-7">
-                      <p className="tm-serial">02</p>
+                    <div>
+                      <div className="team__name-wrap-7">
+                        <p className="tm-serial">01</p>
 
-                      <h3 className="tm-name">Aliya D. Albert</h3>
+                        <h3 className="tm-name">Saymon D. Halk</h3>
+                      </div>
+
+                      <h4 className="tm-role">
+                        Web Developer Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Tempora soluta error magni dolorem
+                        voluptates accusantium illo numquam at libero quidem
+                        nobis quasi adipisci fuga necessitatibus, quaerat odio
+                        mollitia voluptatem eligendi!
+                      </h4>
                     </div>
-                    <h4 className="tm-role">
-                      Founder <br /> CEO
-                    </h4>
+
                     <div className="tm-link">
                       <i className="fa-solid fa-arrow-right"></i>
                     </div>
+
                     <div
                       className="team__hover-7"
-                      style={{ backgroundImage: "url(assets/imgs/team/2.jpg)" }}
+                      style={{ backgroundImage: "url(assets/imgs/team/1.jpg)" }}
                     ></div>
                   </div>
                 </Link>
 
                 <Link href="/team-details">
                   <div className="team__item-7 fade_bottom_3">
-                    <div className="team__name-wrap-7">
-                      <p className="tm-serial">03</p>
-                      <h3 className="tm-name">Jassica Oliver</h3>
+                    <div>
+                      <div className="team__name-wrap-7">
+                        <p className="tm-serial">01</p>
+
+                        <h3 className="tm-name">Saymon D. Halk</h3>
+                      </div>
+
+                      <h4 className="tm-role">
+                        Web Developer Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Tempora soluta error magni dolorem
+                        voluptates accusantium illo numquam at libero quidem
+                        nobis quasi adipisci fuga necessitatibus, quaerat odio
+                        mollitia voluptatem eligendi!
+                      </h4>
                     </div>
-                    <h4 className="tm-role">
-                      Creative <br /> Content Writer{" "}
-                    </h4>
+
                     <div className="tm-link">
                       <i className="fa-solid fa-arrow-right"></i>
                     </div>
+
                     <div
                       className="team__hover-7"
-                      style={{ backgroundImage: "url(assets/imgs/team/3.jpg)" }}
+                      style={{ backgroundImage: "url(assets/imgs/team/1.jpg)" }}
                     ></div>
                   </div>
                 </Link>
+
                 <Link href="/team-details">
                   <div className="team__item-7 fade_bottom_3">
-                    <div className="team__name-wrap-7">
-                      <p className="tm-serial">04</p>
-                      <h3 className="tm-name">Daniyel Adamson</h3>
+                    <div>
+                      <div className="team__name-wrap-7">
+                        <p className="tm-serial">01</p>
+
+                        <h3 className="tm-name">Saymon D. Halk</h3>
+                      </div>
+
+                      <h4 className="tm-role">
+                        Web Developer Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Tempora soluta error magni dolorem
+                        voluptates accusantium illo numquam at libero quidem
+                        nobis quasi adipisci fuga necessitatibus, quaerat odio
+                        mollitia voluptatem eligendi!
+                      </h4>
                     </div>
-                    <h4 className="tm-role">
-                      Head of <br /> Researcher
-                    </h4>
+
                     <div className="tm-link">
                       <i className="fa-solid fa-arrow-right"></i>
                     </div>
+
                     <div
                       className="team__hover-7"
-                      style={{ backgroundImage: "url(assets/imgs/team/4.jpg)" }}
+                      style={{ backgroundImage: "url(assets/imgs/team/1.jpg)" }}
                     ></div>
                   </div>
                 </Link>
-                <Link href="/team-details">
-                  <div className="team__item-7 fade_bottom_3">
-                    <div className="team__name-wrap-7">
-                      <p className="tm-serial">05</p>
-                      <h3 className="tm-name">Hardiya Kethrine</h3>
-                    </div>
-                    <h4 className="tm-role">
-                      Digital <br /> Marketer
-                    </h4>
-                    <div className="tm-link">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </div>
-                    <div
-                      className="team__hover-7"
-                      style={{ backgroundImage: "url(assets/imgs/team/5.jpg)" }}
-                    ></div>
-                  </div>
-                </Link>
-                <Link href="/team-details">
-                  <div className="team__item-7 fade_bottom_3">
-                    <div className="team__name-wrap-7">
-                      <p className="tm-serial">06</p>
-                      <h3 className="tm-name">Julian B. Folder</h3>
-                    </div>
-                    <h4 className="tm-role">
-                      Creative <br /> Designer
-                    </h4>
-                    <div className="tm-link">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </div>
-                    <div
-                      className="team__hover-7"
-                      style={{ backgroundImage: "url(assets/imgs/team/6.jpg)" }}
-                    ></div>
-                  </div>
-                </Link>
-                <Link href="/team-details">
-                  <div className="team__item-7 fade_bottom_3">
-                    <div className="team__name-wrap-7">
-                      <p className="tm-serial">07</p>
-                      <h3 className="tm-name">Denial Karlos</h3>
-                    </div>
-                    <h4 className="tm-role">
-                      Backend <br /> Developer
-                    </h4>
-                    <div className="tm-link">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </div>
-                    <div
-                      className="team__hover-7"
-                      style={{ backgroundImage: "url(assets/imgs/team/7.jpg)" }}
-                    ></div>
-                  </div>
-                </Link>
+
                 <div className="team7__img-wrap">
                   <div className="team7__img"></div>
                 </div>
