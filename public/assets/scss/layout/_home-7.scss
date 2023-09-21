@@ -1257,6 +1257,22 @@
         margin-bottom: 20px;
       }
 
+      &_videoWrapper {
+        height: 205px;
+        width: 205px;
+        background: url("https://www.viabletree.com/wp-content/uploads/2023/06/Startup-GIF.gif")
+          no-repeat;
+        position: absolute;
+        transition: all 0.3s;
+        display: none;
+        right: 50px;
+        top: -100px;
+        border-radius: 100%;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+      }
+
       &::after {
         position: absolute;
         content: "";
@@ -1281,6 +1297,15 @@
           right: -1px;
           top: 0;
           border-radius: 15px;
+        }
+      }
+
+      @media (min-width: 990px) {
+        &:hover {
+          .portfolio__service-item_videoWrapper {
+            display: flex;
+            transition: all 0.3s;
+          }
         }
       }
 

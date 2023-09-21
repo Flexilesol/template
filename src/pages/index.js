@@ -1,17 +1,16 @@
 import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
-import CreativeAgencyAbout from "@/components/about/CreativeAgencyAbout";
-import CreativeAgencyAward from "@/components/award/CreativeAgencyAward";
-import CreativeAgencyPortfolio from "@/components/portfolio/CreativeAgencyPortfolio";
 import CreativeAgencyTeam from "@/components/team/CreativeAgencyTeam";
 import CreativeAgencyBrand from "@/components/brand/CreativeAgencyBrand";
-import CreativeAgencyBlog from "@/components/blog/CreativeAgencyBlog";
 import CreativeAgencyCTA from "@/components/cta/CreativeAgencyCTA";
 import ServiceElementV2 from "@/components/service/ServiceElementV2";
 import StartupAgencyHero from "@/components/hero/StartupAgencyHero";
 import StartupAgencyService from "@/components/service/StartupAgencyService";
 import Holistic from "@/components/LandingPage/Holistic";
 import StartupAgencyWorkflow from "@/components/workflow/StartupAgencyWorkflow";
+import DesignStudioProtfolio from "@/components/portfolio/DesignStudioProtfolio";
+import DigitalAgencyRoll from "@/components/roll/DigitalAgencyRoll";
+import Faq1 from "@/components/faq/Faq1";
 
 const CreativeAgencyDark = () => {
   return (
@@ -24,15 +23,18 @@ const CreativeAgencyDark = () => {
       <main>
         <RootLayout header="header4" footer="footer4" defaultMode="dark">
           <StartupAgencyHero />
-          <CreativeAgencyAbout />
           <StartupAgencyService />
           <CreativeAgencyTeam />
           <Holistic />
           <StartupAgencyWorkflow />
-          <ServiceElementV2 />
+          <DesignStudioProtfolio />
+
+          <DigitalAgencyRoll />
           <CreativeAgencyBrand />
-          <CreativeAgencyBlog />
           <CreativeAgencyCTA />
+
+          <ServiceElementV2 />
+          <Faq1 />
         </RootLayout>
       </main>
     </div>

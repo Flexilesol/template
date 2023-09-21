@@ -2,7 +2,6 @@
 /*  22. PORTFOLIO CSS START
 /*----------------------------------------*/
 
-
 .portfolio {
   &__text {
     text-align: center;
@@ -79,7 +78,7 @@
           }
         }
       }
-      // update v0.2 
+      // update v0.2
       .sec-title-3 {
         font-weight: 400;
         background-image: url(/assets/imgs/shape/1.png);
@@ -131,7 +130,7 @@
           }
         }
       }
-      // update v0.2 
+      // update v0.2
       .sec-title-33 {
         font-weight: 400;
         background-image: url(/assets/imgs/shape/1.png);
@@ -181,6 +180,94 @@
             padding-right: 0;
             padding-left: 85px;
           }
+        }
+      }
+
+      .swiper-btn {
+        display: flex;
+        gap: 30px;
+
+        div {
+          font-size: 20px;
+          color: var(--white);
+          border: 1px solid var(--white);
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          transition: all 0.3s;
+          position: absolute;
+          top: 50%;
+          transform: translateX(-50%);
+          z-index: 9;
+          opacity: 0;
+          visibility: hidden;
+
+          @media (max-width: 1365px) {
+            opacity: 1;
+            visibility: visible;
+            top: calc(50% - 100px);
+          }
+
+          @media (max-width: 1023px) {
+            opacity: 1;
+            visibility: visible;
+            top: calc(50% - 25px);
+          }
+
+          &:hover {
+            color: var(--black-2);
+            background-color: var(--white);
+          }
+
+          &.pp-prev {
+            left: 26px;
+          }
+
+          &.pp-next {
+            right: 0;
+
+            @media (max-width: 1365px) {
+              right: -24px;
+            }
+          }
+        }
+      }
+
+      .swiper-pagination {
+        width: 120px;
+        left: 370px;
+        top: 0;
+        bottom: unset;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 1;
+        color: var(--white);
+
+        @media #{$xl} {
+          left: 300px;
+        }
+
+        @media #{$lg} {
+          left: 180px;
+        }
+
+        @media #{$sm} {
+          left: -22px;
+          padding-top: 10px;
+        }
+
+        @media #{$md} {
+          left: 0;
+        }
+
+        &-total {
+          font-size: 22px;
+          display: flex;
+          justify-content: flex-end;
+          margin-top: -50px;
         }
       }
     }
@@ -288,7 +375,6 @@
           margin-top: -50px;
         }
       }
-
     }
 
     &-6 {
@@ -375,79 +461,88 @@
         height: auto;
       }
 
-      &-pagination {
-        @media #{$sm} {
-          display: none;
-        }
+      // &-pagination {
+      //   @media #{$sm} {
+      //     display: none;
+      //   }
 
-        .swiper-pagination-bullets {
-          left: calc(100% - 135px);
-          top: 50%;
-          transform: translate3d(0px, -50%, 0);
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+      //   .swiper-pagination-bullets {
+      //     left: calc(100% - 135px);
+      //     top: 50%;
+      //     transform: translate3d(0px, -50%, 0);
+      //     display: flex;
+      //     flex-direction: column;
+      //     justify-content: center;
 
-          @media #{$lg} {
-            left: calc(100% - 60px);
-          }
+      //     @media #{$lg} {
+      //       left: calc(100% - 60px);
+      //     }
 
-          @media #{$md} {
-            left: calc(100% - 45px);
-          }
-        }
+      //     @media #{$md} {
+      //       left: calc(100% - 45px);
+      //     }
+      //   }
 
-        .swiper-pagination-bullet {
-          display: block;
-          margin: 15px 10px !important;
-          width: 50px;
-          height: 50px;
-          background: transparent;
-          border: 1px solid #D6D6D6;
+      //   .swiper-pagination-bullet {
+      //     display: block;
+      //     margin: 15px 10px !important;
+      //     width: 50px;
+      //     height: 50px;
+      //     background: transparent;
+      //     border: 1px solid #d6d6d6;
+      //     opacity: 1;
+      //     position: relative;
+      //     transition: all 0.3s;
+
+      //     @media #{$xxl} {
+      //       margin: 10px !important;
+      //     }
+
+      //     @media #{$xl} {
+      //       margin: 10px !important;
+      //     }
+
+      //     @media #{$lg} {
+      //       width: 30px;
+      //       height: 30px;
+      //       margin: 10px !important;
+      //     }
+
+      //     @media #{$md} {
+      //       width: 25px;
+      //       height: 25px;
+      //       margin: 5px !important;
+      //     }
+
+      //     &::after {
+      //       position: absolute;
+      //       content: "";
+      //       width: 6px;
+      //       height: 6px;
+      //       left: 50%;
+      //       top: 50%;
+      //       border-radius: 50px;
+      //       background-color: #d6d6d6;
+      //       transform: translate(-50%, -50%);
+      //     }
+
+      //     &-active,
+      //     &:hover {
+      //       border-color: var(--black-2);
+
+      //       &::after {
+      //         background-color: var(--black-2);
+      //       }
+      //     }
+      //   }
+      // }
+
+      position: relative;
+
+      &:hover {
+        .swiper-btn div {
           opacity: 1;
-          position: relative;
-          transition: all 0.3s;
-
-          @media #{$xxl} {
-            margin: 10px !important;
-          }
-
-          @media #{$xl} {
-            margin: 10px !important;
-          }
-
-          @media #{$lg} {
-            width: 30px;
-            height: 30px;
-            margin: 10px !important;
-          }
-
-          @media #{$md} {
-            width: 25px;
-            height: 25px;
-            margin: 5px !important;
-          }
-
-          &::after {
-            position: absolute;
-            content: "";
-            width: 6px;
-            height: 6px;
-            left: 50%;
-            top: 50%;
-            border-radius: 50px;
-            background-color: #D6D6D6;
-            transform: translate(-50%, -50%);
-          }
-
-          &-active,
-          &:hover {
-            border-color: var(--black-2);
-
-            &::after {
-              background-color: var(--black-2);
-            }
-          }
+          visibility: visible;
         }
       }
     }
@@ -470,6 +565,15 @@
       grid-template-columns: 1fr 1fr;
       align-items: center;
       background-color: var(--white);
+
+      position: relative;
+
+      &:hover {
+        .swiper-btn div {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
 
       @media #{$sm} {
         grid-template-columns: 1fr;
@@ -604,7 +708,6 @@
           width: 100%;
         }
       }
-
     }
   }
 
@@ -819,10 +922,6 @@
     }
   }
 
-
-
-
-
   // Paginaton
   &__pagination {
     &-6 {
@@ -856,7 +955,6 @@
         padding-left: 0;
       }
     }
-
   }
 
   &__current {
@@ -893,7 +991,6 @@
     }
   }
 
-
   // Details
   &__detail {
     overflow: hidden;
@@ -903,7 +1000,6 @@
     }
 
     &-top {
-
       .pt-110 {
         @media #{$lg} {
           padding-top: 140px;
@@ -1107,7 +1203,6 @@
     }
 
     .block {
-
       &-thumb {
         @include img_anim(100%, 65vh, 120%);
         z-index: 9;
@@ -1117,7 +1212,7 @@
           @include img_anim(100%, auto, auto);
 
           img {
-            position: unset
+            position: unset;
           }
         }
 
@@ -1125,7 +1220,7 @@
           @include img_anim(100%, auto, auto);
 
           img {
-            position: unset
+            position: unset;
           }
         }
       }
@@ -1194,7 +1289,6 @@
     }
   }
 
-
   // Portfolio V2
   &-v2 {
     &.pt-150 {
@@ -1212,7 +1306,6 @@
     }
   }
 
-
   // Portfolio V3
   &-v3 {
     .pt-100 {
@@ -1229,7 +1322,6 @@
       }
     }
   }
-
 
   // Portfolio V4
   &-v4 {
@@ -1317,7 +1409,6 @@
       }
     }
   }
-
 }
 
 .swiper-slide-active {
@@ -1326,8 +1417,7 @@
   }
 }
 
-
-// 
+//
 .bg_image {
   position: absolute;
   top: 0;
@@ -1341,7 +1431,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 2;
     content: "";
   }

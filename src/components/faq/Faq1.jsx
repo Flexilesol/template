@@ -29,7 +29,7 @@ const Faq1 = () => {
             <div className="col-xxl-12">
               <div className="faq__list-6">
                 <Accordion
-                  defaultActiveKey="0"
+                  defaultActiveKey=""
                   className="accordion"
                   id="accordionExample"
                 >

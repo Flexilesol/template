@@ -79,6 +79,8 @@ const Holistic = () => {
                       <li>+ PHP & Laravel</li>
                     </ul>
                   </Link>
+
+                  <div className="portfolio__service-item_videoWrapper"></div>
                 </div>
               </div>
 
@@ -94,6 +96,8 @@ const Holistic = () => {
                       <li>+ PHP & Laravel</li>
                     </ul>
                   </Link>
+
+                  <div className="portfolio__service-item_videoWrapper"></div>
                 </div>
               </div>
 
@@ -109,6 +113,8 @@ const Holistic = () => {
                       <li>+ PHP & Laravel</li>
                     </ul>
                   </Link>
+
+                  <div className="portfolio__service-item_videoWrapper"></div>
                 </div>
               </div>
             </div>

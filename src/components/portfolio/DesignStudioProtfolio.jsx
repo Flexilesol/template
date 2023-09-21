@@ -1,4 +1,4 @@
-import { Autoplay, EffectFade, Pagination } from "swiper";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Portfilio21 from "../../../public/assets/imgs/portfolio/2/1.jpg";
 import Portfilio22 from "../../../public/assets/imgs/portfolio/2/2.jpg";
@@ -13,6 +13,8 @@ import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const DesignStudioProtfolio = () => {
   return (
@@ -38,27 +40,32 @@ const DesignStudioProtfolio = () => {
 
         <div className="portfolio__slider-2">
           <Swiper
-            modules={[Autoplay, EffectFade, Pagination]}
-            spaceBetween={0}
+            modules={[Autoplay, EffectFade, Pagination, Navigation]}
+            // spaceBetween={0}
             effect={"fade"}
-            slidesPerView={1}
+            // slidesPerView={1}
             loop={true}
             speed={1500}
             autoplay={{
               delay: 5000,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
             }}
-            pagination={{
-              el: ".swiper-pagination",
-              clickable: true,
-              renderBullet: function (i, className) {
-                return `
-                <button class="${className}">
-                  <svg class="circle-progress"><circle class="circle-origin" r="24.5" cx="25" cy="25"></circle></svg><span></span>
-                </button>
-              `;
-              },
+            navigation={{
+              prevEl: ".pp-prev",
+              nextEl: ".pp-next",
             }}
+            // pagination={{
+            //   el: ".swiper-pagination",
+            //   clickable: true,
+            //   renderBullet: function (i, className) {
+            //     return `
+            //     <button class="${className}">
+            //       <svg class="circle-progress"><circle class="circle-origin" r="24.5" cx="25" cy="25"></circle></svg><span></span>
+            //     </button>
+            //   `;
+            //   },
+            // }}
+            pagination={{ el: ".swiper-pagination", type: "fraction" }}
           >
             <div className="swiper-wrapper">
               <SwiperSlide>
@@ -83,6 +90,10 @@ const DesignStudioProtfolio = () => {
                     <p>
                       We are passionate designers, developers and digital
                       marketeers. We produce best projects that both ourselves
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Iste commodi animi repudiandae. Minima velit nemo dolorum
+                      tempora id. Reiciendis expedita omnis autem ducimus
+                      quibusdam mollitia pariatur quis sed soluta est.
                     </p>
                     <div className="btn-common-wrap">
                       <Link href="/portfolio-details" className="btn-common">
@@ -223,7 +234,17 @@ const DesignStudioProtfolio = () => {
               </SwiperSlide>
             </div>
 
-            <div className="swiper-pagination circle-pagination right"></div>
+            {/* <div className="swiper-pagination circle-pagination right"></div> */}
+            <div className="swiper-pagination"></div>
+
+            <div className="swiper-btn">
+              <div style={{ cursor: "pointer" }} className="pp-prev">
+                <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
+              </div>
+              <div style={{ cursor: "pointer" }} className="pp-next">
+                <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+              </div>
+            </div>
           </Swiper>
         </div>
       </section>
