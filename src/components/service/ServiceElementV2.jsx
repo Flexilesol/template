@@ -7,6 +7,14 @@ import Service12 from "../../../public/assets/imgs/service/1/2.png";
 import Service13 from "../../../public/assets/imgs/service/1/3.png";
 import Service14 from "../../../public/assets/imgs/service/1/4.png";
 import Image from "next/image";
+import { FreeMode, Navigation } from "swiper";
+import { SwiperSlide, Swiper } from "swiper/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/free-mode";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +27,7 @@ const ServiceElementV2 = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      let listItem = serviceList.current.children;
+      let listItem = serviceList?.current?.children ?? [];
       console.log(listItem);
       for (let i = 0; i < listItem.length; i++) {
         listItem[i].addEventListener("mousemove", function (e) {
@@ -151,6 +159,7 @@ const ServiceElementV2 = () => {
                         : "service__img img-1"
                     }
                   />
+
                   <Image
                     priority
                     width={280}
@@ -163,6 +172,7 @@ const ServiceElementV2 = () => {
                         : "service__img img-2"
                     }
                   />
+
                   <Image
                     priority
                     width={280}
@@ -175,6 +185,7 @@ const ServiceElementV2 = () => {
                         : "service__img img-3"
                     }
                   />
+
                   <Image
                     priority
                     width={280}
@@ -195,6 +206,7 @@ const ServiceElementV2 = () => {
                         : "shapes shape-box-1"
                     }
                   ></span>
+
                   <span
                     className={
                       activeShape == 2
@@ -202,6 +214,7 @@ const ServiceElementV2 = () => {
                         : "shapes shape-box-2"
                     }
                   ></span>
+
                   <span
                     className={
                       activeShape == 3
@@ -209,6 +222,7 @@ const ServiceElementV2 = () => {
                         : "shapes shape-box-3"
                     }
                   ></span>
+
                   <span
                     className={
                       activeShape == 4
@@ -242,7 +256,7 @@ const ServiceElementV2 = () => {
                       </div>
                       <div className="service__link">
                         <p>
-                          <i className="fa-solid fa-arrow-right"></i>
+                          <i className="fa-solid fa-quote-left"></i>
                         </p>
                       </div>
                     </div>
@@ -271,7 +285,9 @@ const ServiceElementV2 = () => {
                       </div>
                       <div className="service__link">
                         <p>
-                          <i className="fa-solid fa-arrow-right"></i>
+                          {/* <i className="fa-solid fa-arrow-right"></i> */}
+
+                          <i className="fa-solid fa-quote-left"></i>
                         </p>
                       </div>
                     </div>
@@ -333,6 +349,113 @@ const ServiceElementV2 = () => {
                       </div>
                     </div>
                   </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="container client-testimonals">
+            <div className="row">
+              <div className="col-xxl-12">
+                <div>
+                  <Swiper
+                    modules={[Navigation, FreeMode]}
+                    spaceBetween={0}
+                    slidesPerView={1}
+                    freeMode={true}
+                    loop={true}
+                    speed={2000}
+                    navigation={{
+                      prevEl: ".prev-button",
+                      nextEl: ".next-button",
+                    }}
+                    className="testimonial__slider-3"
+                  >
+                    <div className="swiper-wrapper">
+                      <SwiperSlide>
+                        <div className="testimonial__slide-3">
+                          <p>
+                            When we talk about Alts, we do not mean a typical
+                            business partner, but rather a team that
+                            collaborates with us daily, always there for us when
+                            we encounter difficulties and celebrate
+                            achievements. We see in Alts our best ally for
+                            success!
+                          </p>
+                          <h2 className="client__name-3">Maria D. Halk</h2>
+                          <h3 className="client__role-3">Managing Director</h3>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="testimonial__slide-3">
+                          <p>
+                            When we talk about Alts, we do not mean a typical
+                            business partner, but rather a team that
+                            collaborates with us daily, always there for us when
+                            we encounter difficulties and celebrate
+                            achievements. We see in Alts our best ally for
+                            success!
+                          </p>
+                          <h2 className="client__name-3">Maria D. Halk</h2>
+                          <h3 className="client__role-3">Managing Director</h3>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="testimonial__slide-3">
+                          <p>
+                            When we talk about Alts, we do not mean a typical
+                            business partner, but rather a team that
+                            collaborates with us daily, always there for us when
+                            we encounter difficulties and celebrate
+                            achievements. We see in Alts our best ally for
+                            success!
+                          </p>
+                          <h2 className="client__name-3">Maria D. Halk</h2>
+                          <h3 className="client__role-3">Managing Director</h3>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="testimonial__slide-3">
+                          <p>
+                            When we talk about Alts, we do not mean a typical
+                            business partner, but rather a team that
+                            collaborates with us daily, always there for us when
+                            we encounter difficulties and celebrate
+                            achievements. We see in Alts our best ally for
+                            success!
+                          </p>
+                          <h2 className="client__name-3">Maria D. Halk</h2>
+                          <h3 className="client__role-3">Managing Director</h3>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className="testimonial__slide-3">
+                          <p>
+                            When we talk about Alts, we do not mean a typical
+                            business partner, but rather a team that
+                            collaborates with us daily, always there for us when
+                            we encounter difficulties and celebrate
+                            achievements. We see in Alts our best ally for
+                            success!
+                          </p>
+                          <h2 className="client__name-3">Maria D. Halk</h2>
+                          <h3 className="client__role-3">Managing Director</h3>
+                        </div>
+                      </SwiperSlide>
+                    </div>
+                    <div
+                      style={{ cursor: "pointer" }}
+                      className="next-button swipper-btn"
+                    >
+                      <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
+                    </div>
+                    <div
+                      style={{ cursor: "pointer" }}
+                      className="prev-button swipper-btn"
+                    >
+                      <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+                    </div>
+                  </Swiper>
                 </div>
               </div>
             </div>

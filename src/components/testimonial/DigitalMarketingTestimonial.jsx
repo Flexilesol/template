@@ -196,7 +196,7 @@ const DigitalMarketingTestimonial = () => {
             </div>
           </div>
         </div>
-        <div className="testimonial__images-3 animation_image_zoom">
+        {/* <div className="testimonial__images-3 animation_image_zoom">
           <Image
             priority
             width={170}
@@ -245,7 +245,7 @@ const DigitalMarketingTestimonial = () => {
             alt="testimonial Image"
             className="testimonial3__img-6"
           />
-        </div>
+        </div> */}
       </section>
     </>
   );
