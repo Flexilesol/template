@@ -1,10 +1,8 @@
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Portfilio21 from "../../../public/assets/imgs/portfolio/2/1.jpg";
-import Portfilio22 from "../../../public/assets/imgs/portfolio/2/2.jpg";
-import Portfilio23 from "../../../public/assets/imgs/portfolio/2/3.jpg";
-import Portfilio24 from "../../../public/assets/imgs/portfolio/2/4.jpg";
-import Portfilio25 from "../../../public/assets/imgs/portfolio/2/5.jpg";
+import AHA from "../../../public/assets/imgs/Home/Portfolio/AHA.png";
+import DORADO from "../../../public/assets/imgs/Home/Portfolio/DORADO.png";
+import TradeKode from "../../../public/assets/imgs/Home/Portfolio/TradeKode.png";
 import Image from "next/image";
 
 // Import Swiper styles
@@ -16,6 +14,29 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+const PORTFOLIO = [
+  {
+    title: "AHA",
+    image: AHA,
+    link: "/",
+    description: "Agriculture and Horticulture",
+  },
+
+  {
+    title: "Dorado",
+    image: DORADO,
+    link: "/",
+    description: "Agriculture and Horticulture",
+  },
+
+  {
+    title: "Trade Kode",
+    image: TradeKode,
+    link: "/",
+    description: "Agriculture and Horticulture",
+  },
+];
+
 const DesignStudioProtfolio = () => {
   return (
     <>
@@ -26,12 +47,14 @@ const DesignStudioProtfolio = () => {
               <div className="sec-title-wrapper text-anim">
                 <div>
                   <h2 className="title-anim sec-title-33">
-                    Selected <span>Projects</span>
+                    Explore Our
+                    <span>Portfolio</span>
                   </h2>
                 </div>
                 <p className="sec-text">
-                  Worked with global brands & agency at the intersection of flat
-                  design and digital technology.
+                  A Web Design Company Striving to Ride the Wave of Innovation –{" "}
+                  <br />
+                  Let's Get Started!
                 </p>
               </div>
             </div>
@@ -54,184 +77,40 @@ const DesignStudioProtfolio = () => {
               prevEl: ".pp-prev",
               nextEl: ".pp-next",
             }}
-            // pagination={{
-            //   el: ".swiper-pagination",
-            //   clickable: true,
-            //   renderBullet: function (i, className) {
-            //     return `
-            //     <button class="${className}">
-            //       <svg class="circle-progress"><circle class="circle-origin" r="24.5" cx="25" cy="25"></circle></svg><span></span>
-            //     </button>
-            //   `;
-            //   },
-            // }}
             pagination={{ el: ".swiper-pagination", type: "fraction" }}
           >
             <div className="swiper-wrapper">
-              <SwiperSlide>
-                <div className="portfolio__slide-2">
-                  <div className="slide-img">
-                    <Link href="/portfolio-details">
-                      <Image
-                        priority
-                        style={{ width: "100%", height: "auto" }}
-                        src={Portfilio21}
-                        alt="Portfolio Image"
-                      />
-                    </Link>
-                  </div>
-                  <div className="slide-content">
-                    <h2 className="sec-title">
-                      {" "}
-                      <Link href="/portfolio-details">
-                        Lionpro <span>Agency</span>
-                      </Link>
-                    </h2>
-                    <p>
-                      We are passionate designers, developers and digital
-                      marketeers. We produce best projects that both ourselves
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Iste commodi animi repudiandae. Minima velit nemo dolorum
-                      tempora id. Reiciendis expedita omnis autem ducimus
-                      quibusdam mollitia pariatur quis sed soluta est.
-                    </p>
-                    <div className="btn-common-wrap">
-                      <Link href="/portfolio-details" className="btn-common">
-                        View details <i className="fa-solid fa-arrow-right"></i>
+              {PORTFOLIO.map((portfolio) => (
+                <SwiperSlide>
+                  <div className="portfolio__slide-2">
+                    <div className="slide-img">
+                      <Link href={portfolio.link}>
+                        <Image
+                          priority
+                          style={{ width: "100%", height: "auto" }}
+                          src={portfolio?.image}
+                          alt="Portfolio Image"
+                        />
                       </Link>
                     </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="portfolio__slide-2">
-                  <div className="slide-img">
-                    <Link href="/portfolio-details">
-                      <Image
-                        priority
-                        style={{ width: "100%", height: "auto" }}
-                        src={Portfilio22}
-                        alt="Portfolio Image"
-                      />
-                    </Link>
-                  </div>
-                  <div className="slide-content">
-                    <h2 className="sec-title">
-                      <Link href="/portfolio-details">
-                        crodyflw <span>Website</span>
-                      </Link>
-                    </h2>
-                    <p>
-                      We are passionate designers, developers and digital
-                      marketeers. We produce best projects that both ourselves
-                    </p>
-                    <div className="btn-common-wrap">
-                      <Link href="/portfolio-details" className="btn-common">
-                        View details <i className="fa-solid fa-arrow-right"></i>
-                      </Link>
+                    <div className="slide-content">
+                      <h2 className="sec-title">
+                        <Link href={portfolio.link}>
+                          {portfolio?.title}{" "}
+                          {portfolio?.title2 && <span>Agency</span>}
+                        </Link>
+                      </h2>
+                      <p>{portfolio?.description}</p>
+                      <div className="btn-common-wrap">
+                        <Link href={portfolio?.link} className="btn-common">
+                          View details{" "}
+                          <i className="fa-solid fa-arrow-right"></i>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="portfolio__slide-2">
-                  <div className="slide-img">
-                    <Link href="/portfolio-details">
-                      <Image
-                        priority
-                        style={{ width: "100%", height: "auto" }}
-                        src={Portfilio23}
-                        alt="Portfolio Image"
-                      />
-                    </Link>
-                  </div>
-                  <div className="slide-content">
-                    <h2 className="sec-title">
-                      {" "}
-                      <Link href="/portfolio-details">
-                        developers
-                        <span>digital</span>
-                      </Link>
-                    </h2>
-                    <p>
-                      We are passionate designers, developers and digital
-                      marketeers. We produce best projects that both ourselves
-                    </p>
-                    <div className="btn-common-wrap">
-                      <Link href="/portfolio-details" className="btn-common">
-                        View details <i className="fa-solid fa-arrow-right"></i>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="portfolio__slide-2">
-                  <div className="slide-img">
-                    <Link href="/portfolio-details">
-                      <Image
-                        priority
-                        style={{ width: "100%", height: "auto" }}
-                        src={Portfilio24}
-                        alt="Portfolio Image"
-                      />
-                    </Link>
-                  </div>
-                  <div className="slide-content">
-                    <h2 className="sec-title">
-                      {" "}
-                      <Link href="/portfolio-details">
-                        Lionpro
-                        <span>marketeers</span>
-                      </Link>
-                    </h2>
-                    <p>
-                      We are passionate designers, developers and digital
-                      marketeers. We produce best projects that both ourselves
-                    </p>
-                    <div className="btn-common-wrap">
-                      <Link href="/portfolio-details" className="btn-common">
-                        View details <i className="fa-solid fa-arrow-right"></i>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="portfolio__slide-2">
-                  <div className="slide-img">
-                    <Link href="/portfolio-details">
-                      <Image
-                        priority
-                        style={{ width: "100%", height: "auto" }}
-                        src={Portfilio25}
-                        alt="Portfolio Image"
-                      />
-                    </Link>
-                  </div>
-                  <div className="slide-content">
-                    <h2 className="sec-title">
-                      {" "}
-                      <Link href="/portfolio-details">
-                        Lionpro <span>Agency</span>
-                      </Link>
-                    </h2>
-                    <p>
-                      We are passionate designers, developers and digital
-                      marketeers. We produce best projects that both ourselves
-                    </p>
-                    <div className="btn-common-wrap">
-                      <Link href="/portfolio-details" className="btn-common">
-                        View details <i className="fa-solid fa-arrow-right"></i>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
             </div>
 
             {/* <div className="swiper-pagination circle-pagination right"></div> */}

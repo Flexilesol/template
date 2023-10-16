@@ -6,6 +6,7 @@ import logoWhite2 from "../../../public/assets/imgs/logo/site-logo-white-2.png";
 import Shape11 from "../../../public/assets/imgs/shape/11.png";
 import Shape12 from "../../../public/assets/imgs/shape/12.png";
 import Image from "next/image";
+import { COMPANY_INFO } from "@/constants";
 
 const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
   const [accordion, setAccordion] = useState(0);
@@ -19,7 +20,6 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
           let firstParent = rootParent[i].children;
           for (let j = 0; j < firstParent.length; j++) {
             if (firstParent[j].className.includes("header_title")) {
-
               let arr = firstParent[j].children[0].textContent.split("");
               let spanData = "";
               for (let k = 0; k < arr.length; k++) {
@@ -63,33 +63,35 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                   style={{ width: "auto", height: "auto" }}
                   src={logoWhite2}
                   alt="Offcanvas Logo"
+                  height={30}
+                  width={120}
                 />
               </Link>
             </div>
             <div className="offcanvas__social">
               <h3 className="social-title">Follow Us</h3>
               <ul>
-                <li>
+                {/* <li>
                   <a href="#">Dribbble</a>
                 </li>
                 <li>
                   <a href="#">Behance</a>
                 </li>
+              */}
                 <li>
-                  <a href="#">Instagram</a>
+                  <a href={COMPANY_INFO.linkedin} target="_blank">
+                    Linkedin
+                  </a>
                 </li>
+
                 <li>
-                  <a href="#">Facebook</a>
-                </li>
-                <li>
-                  <a href="#">Twitter</a>
-                </li>
-                <li>
-                  <a href="#">YouTube</a>
+                  <a href={COMPANY_INFO?.facebook} target="_blank">
+                    Facebook
+                  </a>
                 </li>
               </ul>
             </div>
-            <div className="offcanvas__links">
+            {/* <div className="offcanvas__links">
               <ul>
                 <li>
                   <Link href="/about">About</Link>
@@ -104,7 +106,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                   <Link href="/blog">blog</Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="offcanvas__mid">
             <div className="offcanvas__menu-wrapper">
@@ -112,84 +114,17 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                 <ul className="menu-anim title" ref={headerTitle}>
                   <li>
                     <div className="header_title">
-                      <Link href={"/digital-marketing"}>HOME</Link>
-                      <div className="accordian-btn">
+                      <Link href={"/"}>HOME</Link>
+                      {/* <div className="accordian-btn">
                         {accordion === 1 ? (
                           <a onClick={() => openData(0)}>-</a>
                         ) : (
                           <a onClick={() => openData(1)}>+</a>
                         )}
-                      </div>
+                      </div> */}
                     </div>
-                    <ul
-                      className="sub_title"
-                      style={
-                        accordion === 1 ? { display: "" } : { display: "none" }
-                      }
-                    >
-                      <li>
-                        <Link href={"/digital-marketing"}>
-                          Digital Maketing
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/digital-marketing-dark"}>
-                          Digital Maketing dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/design-studio"}>Design Studio </Link>
-                      </li>
-                      <li>
-                        <Link href={"/design-studio-dark"}>
-                          Design Studio dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/digital-agency"}>Digital Agency</Link>
-                      </li>
-                      <li>
-                        <Link href={"/digital-agency-dark"}>
-                          Digital Agency dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/creative-agency"}>creative Agency</Link>
-                      </li>
-                      <li>
-                        <Link href={"/creative-agency"}>
-                          creative Agency dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/startup-agency"}>Startup Agency</Link>
-                      </li>
-                      <li>
-                        <Link href={"/startup-agency-dark"}>
-                          Startup Agency dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/modern-agency"}>modern agency</Link>
-                      </li>
-                      <li>
-                        <Link href={"/modern-agency-dark"}>
-                          modern agency dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/personal-portfolio"}>
-                          personal Portfolio
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/personal-portfolio-dark"}>
-                          personal Portfolio dark
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
-                  <li>
+                  {/* <li>
                     <div className="header_title">
                       <Link href={"/about"}>ABOUT</Link>
                     </div>
@@ -605,7 +540,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                         </Link>
                       </li>
                     </ul>
-                  </li>
+                  </li> */}
                   <li>
                     <div className="header_title">
                       <Link href={"/contact"}>CONTACT</Link>
@@ -617,23 +552,25 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
           </div>
           <div className="offcanvas__right">
             <div className="offcanvas__search">
-              <form action="#">
+              {/* <form action="#">
                 <input type="text" name="search" placeholder="Search keyword" />
                 <button>
                   <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
                 </button>
-              </form>
+              </form> */}
             </div>
             <div className="offcanvas__contact">
               <h3>Get in touch</h3>
               <ul>
                 <li>
-                  <a href="tel:02094980547">+(02) - 094 980 547</a>
+                  <a href="tel:02094980547">{COMPANY_INFO?.infoPhone}</a>
                 </li>
                 <li>
-                  <a href="mailto:info@extradesign.com">info@extradesign.com</a>
+                  <a href={`mailto:${COMPANY_INFO?.infoEmail}`}>
+                    {COMPANY_INFO.infoEmail}
+                  </a>
                 </li>
-                <li>230 Norman Street New York, QC (USA) H8R 1A1</li>
+                <li>{COMPANY_INFO.address}</li>
               </ul>
             </div>
             <Image

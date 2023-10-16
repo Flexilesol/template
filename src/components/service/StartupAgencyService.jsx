@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
 import Link from "next/link";
 import MobileIcon from "../../../public/assets/imgs/home-7/Services/mobile.svg";
-import service1 from "../../../public/assets/imgs/service/4/service-1.png";
+import service1 from "../../../public/assets/imgs/Home/Services/Consulting.png";
 import Image from "next/image";
 import { Accordion } from "react-bootstrap";
 
@@ -12,21 +12,21 @@ gsap.registerPlugin(ScrollTrigger);
 const CONTENT = [
   {
     eventKey: "0",
-    title: "Brand Strategy",
+    title: "Consulting",
     number: "01",
-    body: `People know what an FAQ is, so make that your page title. Don’t overcomplicate things by calling it “Good to Know” or “More Info”. Sometimes people put the frequently asked questions section on their Contact page, but you can create your own page and put it right in your website navigation menu or website footer so it’s easy to find. Getting a straight, quick answer to your question is a relief. So keep answers to a short paragraph if you can, less than 100 words. Answer the entire question in the FAQ without linking away to another page`,
+    body: `Prepare for a tech adventure infused with Flexile Sol's enchanting touch. Our tech wizards stand ready to craft an IT strategy that harmonizes seamlessly with your business objectives.`,
   },
   {
     eventKey: "1",
-    title: "Development",
+    title: "Implementation",
     number: "02",
-    body: `People know what an FAQ is, so make that your page title. Don’t overcomplicate things by calling it “Good to Know” or “More Info”. Sometimes people put the frequently asked questions section on their Contact page, but you can create your own page and put it right in your website navigation menu or website footer so it’s easy to find. Getting a straight, quick answer to your question is a relief. So keep answers to a short paragraph if you can, less than 100 words. Answer the entire question in the FAQ without linking away to another page`,
+    body: `Our streamlined implementation approach empowers us to navigate intricacies while enhancing user experiences through data assimilation and project evaluation.`,
   },
   {
     eventKey: "2",
-    title: "UI/UX Design",
+    title: "Resource Augmentation",
     number: "03",
-    body: `People know what an FAQ is, so make that your page title. Don’t overcomplicate things by calling it “Good to Know” or “More Info”. Sometimes people put the frequently asked questions section on their Contact page, but you can create your own page and put it right in your website navigation menu or website footer so it’s easy to find. Getting a straight, quick answer to your question is a relief. So keep answers to a short paragraph if you can, less than 100 words. Answer the entire question in the FAQ without linking away to another page`,
+    body: `As your dedicated partners in business process outsourcing, we make your strategic goals our top priority. Our team comprises highly skilled professionals adhering to global standards, enabling you to expand your IT workforce and trim hiring timelines and overhead expenses.`,
   },
 ];
 
@@ -89,18 +89,18 @@ const StartupAgencyService = () => {
               <div className="service__left-6">
                 <h2 className="sec-subtile-6">Services</h2>
                 <h3 className="sec-title-6 title-anim">
-                  Our full <br /> creative services <br /> for you
+                  Innovative <br /> Creative Solutions <br />
                 </h3>
               </div>
             </div>
             <div className="col-xxl-7 col-xl-7 col-lg-6 col-md-6">
               <div className="service__right-4">
                 <p>
-                  We are constantly rethinking the future by creating the next
-                  generation of products,{" "}
-                  <span>brands and services from a hybrid perspective.</span>
+                  We aren't simply crafting applications; we are architecting
+                  solutions that breathe life into your business,{" "}
+                  <span>helping it flourish and prosper.</span>
                 </p>
-                <Link className="btn-view" href="/service">
+                <Link className="btn-view" href="/">
                   View All Service <i className="fa-solid fa-arrow-right"></i>
                 </Link>
               </div>

@@ -3,9 +3,9 @@ import logoWhite2 from "../../../public/assets/imgs/logo/site-logo-white-2.png";
 import logoBlack from "../../../public/assets/imgs/logo/logo-black.png";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { COMPANY_INFO } from "@/constants";
 
 export default function Footer4() {
-
   const menuAnim = useRef();
   useEffect(() => {
     if (menuAnim.current) {
@@ -16,17 +16,17 @@ export default function Footer4() {
     let rootParent = menuAnim.current.children;
     for (let i = 0; i < rootParent.length; i++) {
       let firstParent = rootParent[i].children;
-      let arr = firstParent[0].textContent.split("")
-      let spanData = ''
+      let arr = firstParent[0].textContent.split("");
+      let spanData = "";
       for (let j = 0; j < arr.length; j++) {
-        if(arr[j] == ' ') {
+        if (arr[j] == " ") {
           spanData += `<span style='width:6px;'>${arr[j]}</span>`;
         } else {
           spanData += `<span>${arr[j]}</span>`;
         }
       }
-      let result = '<div class="menu-text">' + spanData + '</div>';
-      firstParent[0].innerHTML = result
+      let result = '<div class="menu-text">' + spanData + "</div>";
+      firstParent[0].innerHTML = result;
     }
   };
 
@@ -51,6 +51,8 @@ export default function Footer4() {
                     className="footer__logo logo-light"
                     src={logoWhite2}
                     alt="Footer Logo"
+                    height={30}
+                    width={140}
                   />
                   <Image
                     priority
@@ -65,30 +67,17 @@ export default function Footer4() {
                   </p>
                   <ul className="footer__social-6">
                     <li>
-                      <a href="#">
+                      <a href={COMPANY_INFO.facebook} target="_blank">
                         <span>
                           <i className="fa-brands fa-facebook-f"></i>
                         </span>
                       </a>
                     </li>
+
                     <li>
-                      <a href="#">
+                      <a href={COMPANY_INFO.linkedin} target="_blank">
                         <span>
-                          <i className="fa-brands fa-twitter"></i>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span>
-                          <i className="fa-brands fa-instagram"></i>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <span>
-                          <i className="fa-brands fa-linkedin"></i>
+                          <i class="fa-brands fa-linkedin"></i>
                         </span>
                       </a>
                     </li>
@@ -99,19 +88,10 @@ export default function Footer4() {
                   <h2 className="footer__item-title">Information</h2>
                   <ul className="footer__link-6">
                     <li>
-                      <Link href="/about">About Company</Link>
+                      <Link href="/">Home</Link>
                     </li>
                     <li>
-                      <Link href="/career">Career</Link>
-                    </li>
-                    <li>
-                      <Link href="/portfolio">Case Study</Link>
-                    </li>
-                    <li>
-                      <a href="#">Unloack System</a>
-                    </li>
-                    <li>
-                      <a href="#">Blueprint</a>
+                      <Link href="/contact">Contact</Link>
                     </li>
                   </ul>
                 </div>
@@ -119,15 +99,18 @@ export default function Footer4() {
                 <div className="footer__item-6">
                   <h2 className="footer__item-title">Contact Us</h2>
                   <ul className="footer__info-6">
-                    <li>Valentin, Street Road 24, New York, USA - 67452</li>
+                    <li>{COMPANY_INFO.address}</li>
                     <li>
-                      <a href="tel:02574328301" className="phone">
-                        (+02) 574 - 328 - 301{" "}
+                      <a
+                        href={`tel:${COMPANY_INFO.infoPhone}`}
+                        className="phone"
+                      >
+                        {COMPANY_INFO.infoPhone}
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:info@buildyexample.com">
-                        info@buildyexample.com
+                      <a href={`mailto:${COMPANY_INFO.infoEmail}`}>
+                        {COMPANY_INFO.infoEmail}
                       </a>
                     </li>
                   </ul>
@@ -161,31 +144,23 @@ export default function Footer4() {
                   <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-5">
                     <div className="footer__copyright-6">
                       <p>
-                        © 2022 - 2025 | Alrights reserved by <br />{" "}
-                        <a href="https://wealcoder.com/" target="_blank">
-                          Wealcoder
-                        </a>
+                        © 2023 | Alrights reserved by <br />{" "}
+                        <Link href="/">Flexile Sol</Link>
                       </p>
                     </div>
                   </div>
-                  <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-7">
+                  {/* <div className="col-xxl-8 col-xl-8 col-lg-8 col-md-7">
                     <div className="footer__nav">
                       <ul className="footer-menu menu-anim" ref={menuAnim}>
                         <li>
-                          <Link href="/about">about us</Link>
+                          <Link href="/">Home</Link>
                         </li>
                         <li>
                           <Link href="/contact">contact</Link>
                         </li>
-                        <li>
-                          <Link href="/career">Career</Link>
-                        </li>
-                        <li>
-                          <Link href="/faq">FAQs</Link>
-                        </li>
                       </ul>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

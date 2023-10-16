@@ -139,6 +139,8 @@
         display: inline-block;
         padding-bottom: 120px;
         padding-right: 320px;
+        color: var(--white-4);
+    
 
         @media #{$lg} {
           background-size: 260px;
@@ -165,6 +167,7 @@
         span {
           display: block;
           padding-left: 450px;
+    
 
           @media #{$lg} {
             padding-right: 0;

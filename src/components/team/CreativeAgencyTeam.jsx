@@ -4,6 +4,51 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
 import Link from "next/link";
 
+const INDUSTRY_CONTENT = [
+  {
+    index: "01",
+    title: "Health",
+    description: `Flexile Sol guarantees strong data security and unwavering compliance commitment in the healthcare sector, effectively mitigating the risks of information breaches.`,
+    image: "assets/imgs/Home/Industries/HealthCare.png",
+  },
+  {
+    index: "02",
+    title: "B2B",
+    description: `Flexile Sol propels B2B triumph, constructing resilient digital bedrocks that expedite growth in the digital landscape, delivering meaningful results for businesses.`,
+    image: "assets/imgs/Home/Industries/B2B.png",
+  },
+  {
+    index: "03",
+    title: "E-Commerce",
+    description: `In this age of online retail, Flexile Sol leads the way in pioneering innovative solutions to meet the ever-changing needs of the dynamic digital market.`,
+    image: "assets/imgs/Home/Industries/Ecommerce.png",
+  },
+  {
+    index: "04",
+    title: "E-Learning",
+    description: `Discover contemporary, tailored eLearning applications, meticulously crafted to captivate learners with intuitive interfaces, delivering exceptional educational journeys.`,
+    image: "assets/imgs/Home/Industries/ELearning.png",
+  },
+  {
+    index: "05",
+    title: "Fintech",
+    description: `Harness the technological expertise of Flexile Sol to seamlessly integrate technology into the delivery and accessibility of financial services for consumers.`,
+    image: "assets/imgs/Home/Industries/Fintech.png",
+  },
+  {
+    index: "06",
+    title: "Hospital",
+    description: `From bookings to check-out, our hospitality proficiency tailors unique guest experiences, harnessing our mastery of hospitality technology solutions.`,
+    image: "assets/imgs/Home/Industries/Hospital.png",
+  },
+  {
+    index: "07",
+    title: "Travel",
+    description: `Embark on a travel evolution with our groundbreaking solutions, streamlining operations and elevating customer experiences for travel agencies, airlines, hotels, and tour operators.`,
+    image: "assets/imgs/Home/Industries/Travel.png",
+  },
+];
+
 gsap.registerPlugin(ScrollTrigger);
 
 const CreativeAgencyTeam = () => {
@@ -72,8 +117,8 @@ const CreativeAgencyTeam = () => {
             <div className="col-xxl-12">
               <div className="sec-text pb-100 text-anim">
                 <p>
-                  We are here to help you achieve your business goals and the
-                  team create an amazing outstanding product for your business.
+                  Welcome the future with Flexile Sol's visionary application
+                  development solutions.
                 </p>
               </div>
             </div>
@@ -81,121 +126,33 @@ const CreativeAgencyTeam = () => {
           <div className="row">
             <div className="col-xxl-12">
               <div className="team__items-7" ref={teamItemContent}>
-                <Link href="/team-details">
-                  <div className="team__item-7 fade_bottom_3">
-                    <div>
-                      <div className="team__name-wrap-7">
-                        <p className="tm-serial">01</p>
+                {INDUSTRY_CONTENT?.length > 0 &&
+                  INDUSTRY_CONTENT.map((industry) => (
+                    <Link href="/">
+                      <div className="team__item-7 fade_bottom_3">
+                        <div>
+                          <div className="team__name-wrap-7">
+                            <p className="tm-serial">{industry?.index}</p>
 
-                        <h3 className="tm-name">Saymon D. Halk</h3>
+                            <h3 className="tm-name">{industry?.title}</h3>
+                          </div>
+
+                          <h4 className="tm-role">{industry.description}</h4>
+                        </div>
+
+                        <div className="tm-link">
+                          <i className="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                        <div
+                          className="team__hover-7"
+                          style={{
+                            backgroundImage: `url(${industry?.image})`,
+                          }}
+                        ></div>
                       </div>
-
-                      <h4 className="tm-role">
-                        Web Developer Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Tempora soluta error magni dolorem
-                        voluptates accusantium illo numquam at libero quidem
-                        nobis quasi adipisci fuga necessitatibus, quaerat odio
-                        mollitia voluptatem eligendi!
-                      </h4>
-                    </div>
-
-                    <div className="tm-link">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div
-                      className="team__hover-7"
-                      style={{ backgroundImage: "url(assets/imgs/team/1.jpg)" }}
-                    ></div>
-                  </div>
-                </Link>
-
-                <Link href="/team-details">
-                  <div className="team__item-7 fade_bottom_3">
-                    <div>
-                      <div className="team__name-wrap-7">
-                        <p className="tm-serial">01</p>
-
-                        <h3 className="tm-name">Saymon D. Halk</h3>
-                      </div>
-
-                      <h4 className="tm-role">
-                        Web Developer Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Tempora soluta error magni dolorem
-                        voluptates accusantium illo numquam at libero quidem
-                        nobis quasi adipisci fuga necessitatibus, quaerat odio
-                        mollitia voluptatem eligendi!
-                      </h4>
-                    </div>
-
-                    <div className="tm-link">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div
-                      className="team__hover-7"
-                      style={{ backgroundImage: "url(assets/imgs/team/1.jpg)" }}
-                    ></div>
-                  </div>
-                </Link>
-
-                <Link href="/team-details">
-                  <div className="team__item-7 fade_bottom_3">
-                    <div>
-                      <div className="team__name-wrap-7">
-                        <p className="tm-serial">01</p>
-
-                        <h3 className="tm-name">Saymon D. Halk</h3>
-                      </div>
-
-                      <h4 className="tm-role">
-                        Web Developer Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Tempora soluta error magni dolorem
-                        voluptates accusantium illo numquam at libero quidem
-                        nobis quasi adipisci fuga necessitatibus, quaerat odio
-                        mollitia voluptatem eligendi!
-                      </h4>
-                    </div>
-
-                    <div className="tm-link">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div
-                      className="team__hover-7"
-                      style={{ backgroundImage: "url(assets/imgs/team/1.jpg)" }}
-                    ></div>
-                  </div>
-                </Link>
-
-                <Link href="/team-details">
-                  <div className="team__item-7 fade_bottom_3">
-                    <div>
-                      <div className="team__name-wrap-7">
-                        <p className="tm-serial">01</p>
-
-                        <h3 className="tm-name">Saymon D. Halk</h3>
-                      </div>
-
-                      <h4 className="tm-role">
-                        Web Developer Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Tempora soluta error magni dolorem
-                        voluptates accusantium illo numquam at libero quidem
-                        nobis quasi adipisci fuga necessitatibus, quaerat odio
-                        mollitia voluptatem eligendi!
-                      </h4>
-                    </div>
-
-                    <div className="tm-link">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </div>
-
-                    <div
-                      className="team__hover-7"
-                      style={{ backgroundImage: "url(assets/imgs/team/1.jpg)" }}
-                    ></div>
-                  </div>
-                </Link>
+                    </Link>
+                  ))}
 
                 <div className="team7__img-wrap">
                   <div className="team7__img"></div>

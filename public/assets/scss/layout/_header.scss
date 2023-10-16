@@ -119,7 +119,7 @@
     &-2 {
       display: grid;
       grid-template-columns: 150px auto 150px;
-      padding: 0 30px;
+      padding: 29px 30px;
 
       @media #{$lg} {
         display: flex;

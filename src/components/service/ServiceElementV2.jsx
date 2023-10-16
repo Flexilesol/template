@@ -125,10 +125,10 @@ const ServiceElementV2 = () => {
           <div className="row">
             <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
               <div className="sec-title-wrapper wrap">
-                <h2 className="sec-sub-title title-anim">service</h2>
+                <h2 className="sec-sub-title title-anim">testimonial</h2>
                 <h3 className="sec-title title-anim">
-                  Solution we <br />
-                  provide
+                  Established History of <br />
+                  Success
                 </h3>
               </div>
             </div>
@@ -235,7 +235,7 @@ const ServiceElementV2 = () => {
               <div className="col-xxl-8 col-xl-8 col-lg-12 col-md-12">
                 <div className="service__list" ref={serviceList}>
                   <Link
-                    href="/service-details"
+                    href="/"
                     className={activeList == 1 ? "active" : ""}
                     data-service="1"
                   >
@@ -256,14 +256,14 @@ const ServiceElementV2 = () => {
                       </div>
                       <div className="service__link">
                         <p>
-                          <i className="fa-solid fa-quote-left"></i>
+                          <i className="fa-solid fa-arrow-right"></i>
                         </p>
                       </div>
                     </div>
                   </Link>
 
                   <Link
-                    href="/service-details"
+                    href="/"
                     className={activeList == 2 ? "active" : ""}
                     data-service="2"
                   >
@@ -287,14 +287,14 @@ const ServiceElementV2 = () => {
                         <p>
                           {/* <i className="fa-solid fa-arrow-right"></i> */}
 
-                          <i className="fa-solid fa-quote-left"></i>
+                          <i className="fa-solid fa-arrow-right"></i>
                         </p>
                       </div>
                     </div>
                   </Link>
 
                   <Link
-                    href="/service-details"
+                    href="/"
                     className={activeList == 3 ? "active" : ""}
                     data-service="3"
                   >
@@ -323,7 +323,7 @@ const ServiceElementV2 = () => {
                   </Link>
 
                   <Link
-                    href="/service-details"
+                    href="/"
                     className={activeList == 4 ? "active" : ""}
                     data-service="4"
                   >

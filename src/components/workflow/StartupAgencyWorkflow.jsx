@@ -69,11 +69,14 @@ const StartupAgencyWorkflow = () => {
           <div className="row animation_workflow_6">
             <div className="col-xxl-12">
               <div className="title-wrapper-6 text-anim">
-                <h2 className="sec-subtile-6">Processing</h2>
-                <h3 className="sec-title-6 title-anim">How we work</h3>
+                <h2 className="sec-subtile-6">How we work</h2>
+                <h3 className="sec-title-6 title-anim">
+                  Dealing with Workflow Obstacles?
+                </h3>
                 <p>
-                  Adjust your design through a wide range of theme options in
-                  the <br /> development and instantly.
+                  Our tailored app development solutions streamline your
+                  workflow, liberating your team to concentrate on what truly
+                  counts. <br /> Let's Delve Deeper into Your Challenges!
                 </p>
               </div>
             </div>
@@ -86,10 +89,10 @@ const StartupAgencyWorkflow = () => {
                   src={Thumb1}
                   alt="Work Image"
                 />
-                <h4 className="workflow__title-4">Teamwork</h4>
+                <h4 className="workflow__title-4">Design</h4>
                 <p>
-                  Modern and unique design practically point of view, it risks
-                  not meeting the huge expectations
+                  We merge design research and business analysis to help clients
+                  envision their software products.
                 </p>
               </div>
             </div>
@@ -102,10 +105,10 @@ const StartupAgencyWorkflow = () => {
                   src={Thumb2}
                   alt="Work Image"
                 />
-                <h4 className="workflow__title-4">Networking</h4>
+                <h4 className="workflow__title-4">Development</h4>
                 <p>
-                  Using year-over-year design and latest techs, we will ensure
-                  that your new website will be visible
+                  In the project's next phase, our adept software engineers take
+                  the lead, coding diligently to breathe life into the project.
                 </p>
               </div>
             </div>
@@ -118,10 +121,11 @@ const StartupAgencyWorkflow = () => {
                   src={Thumb3}
                   alt="Work Image"
                 />
-                <h4 className="workflow__title-4">Exposure</h4>
+                <h4 className="workflow__title-4">Ongoing Support</h4>
                 <p>
-                  Brand strategy tools are made size for marketing teams taken
-                  possession of global strategy
+                  We accommodate change requests, providing solutions that align
+                  with the evolving needs and preferences of our clients and
+                  users.
                 </p>
               </div>
             </div>

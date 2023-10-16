@@ -52,7 +52,7 @@ const Holistic = () => {
           <div className="row">
             <div className="col-xxl-5 col-xl-5 col-lg-6 col-md-6">
               <h2 className="sec-title fade_bottom">
-                Holistic View of what we do
+                Catering to Diverse Needs
               </h2>
             </div>
             <div className="col-xxl-7 col-xl-7 col-lg-6 col-md-6">
@@ -70,13 +70,17 @@ const Holistic = () => {
               <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
                 <div className="portfolio__service-item fade_bottom">
                   <Link href="/service-details fade_bottom">
-                    <h3 className="ps-title ">
-                      Frontend <br /> Developemnt
-                    </h3>
+                    <h3 className="ps-title ">Enterprises</h3>
+                    <p className="ps-description">
+                      Elevate your business with our expansive suite of
+                      customized application development services, embracing the
+                      latest technologies to enhance your growth.
+                    </p>
                     <ul>
-                      <li>+ WordPress</li>
-                      <li>+ Python</li>
-                      <li>+ PHP & Laravel</li>
+                      <li>+ Custom software development</li>
+                      <li>+ Digital Transformation</li>
+                      <li>+ Application and system Modernization</li>
+                      <li>+ Resource Augmentation</li>
                     </ul>
                   </Link>
 
@@ -87,30 +91,17 @@ const Holistic = () => {
               <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
                 <div className="portfolio__service-item fade_bottom">
                   <Link href="/service-details fade_bottom">
-                    <h3 className="ps-title ">
-                      Frontend <br /> Developemnt
-                    </h3>
+                    <h3 className="ps-title ">Startups</h3>
+                    <p className="ps-description">
+                      Fueling startups with our bespoke app development
+                      services, nurturing business growth from day one. Our
+                      Proof of Concept (POC) MVP solutions pave the way:
+                    </p>
                     <ul>
-                      <li>+ WordPress</li>
-                      <li>+ Python</li>
-                      <li>+ PHP & Laravel</li>
-                    </ul>
-                  </Link>
-
-                  <div className="portfolio__service-item_videoWrapper"></div>
-                </div>
-              </div>
-
-              <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
-                <div className="portfolio__service-item fade_bottom">
-                  <Link href="/service-details fade_bottom">
-                    <h3 className="ps-title ">
-                      Frontend <br /> Developemnt
-                    </h3>
-                    <ul>
-                      <li>+ WordPress</li>
-                      <li>+ Python</li>
-                      <li>+ PHP & Laravel</li>
+                      <li>+ Series A,B,C, and Mezzanine</li>
+                      <li>+ Post Mezzanine</li>
+                      <li>+ Pre Seed</li>
+                      <li>+ Seed</li>
                     </ul>
                   </Link>
 
