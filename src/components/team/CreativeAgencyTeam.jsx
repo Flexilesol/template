@@ -128,7 +128,7 @@ const CreativeAgencyTeam = () => {
               <div className="team__items-7" ref={teamItemContent}>
                 {INDUSTRY_CONTENT?.length > 0 &&
                   INDUSTRY_CONTENT.map((industry) => (
-                    <Link href="/">
+                    <Link href="/" key={industry?.title}>
                       <div className="team__item-7 fade_bottom_3">
                         <div>
                           <div className="team__name-wrap-7">

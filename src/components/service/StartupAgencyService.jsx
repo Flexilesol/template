@@ -158,6 +158,7 @@ const StartupAgencyService = () => {
                                     src={MobileIcon}
                                     height={32}
                                     width={30}
+                                    alt="Mobile app"
                                   />
 
                                   <span>Mobile Development</span>
@@ -168,6 +169,7 @@ const StartupAgencyService = () => {
                                     src={MobileIcon}
                                     height={32}
                                     width={30}
+                                    alt="Mobile app"
                                   />
 
                                   <span>Mobile Development</span>

@@ -52,7 +52,7 @@ const DesignStudioProtfolio = () => {
                   </h2>
                 </div>
                 <p className="sec-text">
-                  A Web Design Company Striving to Ride the Wave of Innovation –{" "}
+                  A Web Design Company Striving to Ride the Wave of Innovation -{" "}
                   <br />
                   Let's Get Started!
                 </p>
@@ -81,7 +81,7 @@ const DesignStudioProtfolio = () => {
           >
             <div className="swiper-wrapper">
               {PORTFOLIO.map((portfolio) => (
-                <SwiperSlide>
+                <SwiperSlide key={portfolio?.title}>
                   <div className="portfolio__slide-2">
                     <div className="slide-img">
                       <Link href={portfolio.link}>
