@@ -84,6 +84,30 @@
   &__form {
     @include zi(9);
 
+    &-error {
+      color: red;
+      font-size: 12px;
+    }
+
+    textarea {
+      min-height: 100px;
+      overflow-y: auto;
+    }
+
+    .col-12 {
+      margin-bottom: 35px;
+      @media #{$lg} {
+        margin-bottom: 25px;
+      }
+
+      @media #{$md} {
+        margin-bottom: 25px;
+      }
+
+      @media #{$sm} {
+        margin-bottom: 20px;
+      }
+    }
     input,
     textarea {
       width: 100%;
@@ -99,20 +123,17 @@
       position: relative;
       z-index: 1;
       background: transparent;
-      margin-bottom: 35px;
+      margin-bottom: 5px;
 
       @media #{$lg} {
         padding: 10px 0;
-        margin-bottom: 25px;
       }
 
       @media #{$md} {
         padding: 10px 0;
-        margin-bottom: 25px;
       }
 
       @media #{$sm} {
-        margin-bottom: 20px;
       }
 
       &:focus {

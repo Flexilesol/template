@@ -35,6 +35,7 @@ const HeaderContent = ({ header, navData }) => {
   }
 };
 const FooterContent = ({ footer }) => {
+  return <Footer4 />;
   if (footer == "footer1") {
     return <Footer1 />;
   } else if (footer == "footer2") {
@@ -42,7 +43,6 @@ const FooterContent = ({ footer }) => {
   } else if (footer == "footer3") {
     return <Footer3 />;
   } else if (footer == "footer4") {
-    return <Footer4 />;
   } else if (footer == "footer5") {
     return <Footer5 />;
   } else if (footer == "none") {
