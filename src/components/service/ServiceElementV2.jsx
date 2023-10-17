@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
 import Link from "next/link";
-import Service11 from "../../../public/assets/imgs/service/1/1.jpg";
-import Service12 from "../../../public/assets/imgs/service/1/2.png";
-import Service13 from "../../../public/assets/imgs/service/1/3.png";
-import Service14 from "../../../public/assets/imgs/service/1/4.png";
+import Taelyr from "../../../public/assets/imgs/Home/Testimonals/Taelyr.png";
+import Danny from "../../../public/assets/imgs/Home/Testimonals/Danny.png";
+import Floyd from "../../../public/assets/imgs/Home/Testimonals/Floyd.png";
+import Kristin from "../../../public/assets/imgs/Home/Testimonals/Kristin.png";
 import Image from "next/image";
 import { FreeMode, Navigation } from "swiper";
 import { SwiperSlide, Swiper } from "swiper/react";
@@ -15,6 +15,34 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
+
+const TESTIMONALS = [
+  {
+    image: Taelyr,
+    name: "Taelyr Simmons",
+    description:
+      "Working with them was an absolute pleasure. Their clarity of communication and insightful suggestions for improving my requirements were warmly embraced and flawlessly executed.",
+  },
+  {
+    image: Floyd,
+    name: "Floyd Miles",
+    description:
+      "I had the pleasure of working with them, they delivered an exceptional job. Their expertise, professionalism, and attention to detail were truly commendable.",
+  },
+  {
+    image: Danny,
+    name: "Danny A.Yousuf",
+    description:
+      "The team quickly grasped the details of the project, both technically and conceptually. | strongly recommend working with them.",
+  },
+
+  {
+    image: Kristin,
+    name: "Kristin Watson",
+    description:
+      "This team remains the best! They're amazing, flexible, and work harder than most people! The team performs miracles everyday, and | am so grateful for finding them; they just get stuff done. There is no one else like them! Would strongly advise anyone to work with this team.",
+  },
+];
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -147,208 +175,61 @@ const ServiceElementV2 = () => {
             <div className="row">
               <div className="col-xxl-4 col-xl-4 col-lg-0 col-md-0">
                 <div className="service__img-wrapper">
-                  <Image
-                    priority
-                    width={280}
-                    style={{ height: "auto" }}
-                    src={Service11}
-                    alt="Service Image"
-                    className={
-                      activeImg == 1
-                        ? "service__img img-1 active"
-                        : "service__img img-1"
-                    }
-                  />
+                  {TESTIMONALS?.map((testimonal, index) => (
+                    <Image
+                      priority
+                      width={280}
+                      style={{ height: "auto" }}
+                      src={testimonal?.image}
+                      alt="Service Image"
+                      className={
+                        activeImg == index + 1
+                          ? `service__img img-${index + 1} active`
+                          : `service__img img-${index + 1}`
+                      }
+                    />
+                  ))}
 
-                  <Image
-                    priority
-                    width={280}
-                    style={{ height: "auto" }}
-                    src={Service12}
-                    alt="Service Image"
-                    className={
-                      activeImg == 2
-                        ? "service__img img-2 active"
-                        : "service__img img-2"
-                    }
-                  />
-
-                  <Image
-                    priority
-                    width={280}
-                    style={{ height: "auto" }}
-                    src={Service13}
-                    alt="Service Image"
-                    className={
-                      activeImg == 3
-                        ? "service__img img-3 active"
-                        : "service__img img-3"
-                    }
-                  />
-
-                  <Image
-                    priority
-                    width={280}
-                    style={{ height: "auto" }}
-                    src={Service14}
-                    alt="Service Image"
-                    className={
-                      activeImg == 4
-                        ? "service__img img-4 active"
-                        : "service__img img-4"
-                    }
-                  />
-
-                  <span
-                    className={
-                      activeShape == 1
-                        ? "shapes shape-box-1 current"
-                        : "shapes shape-box-1"
-                    }
-                  ></span>
-
-                  <span
-                    className={
-                      activeShape == 2
-                        ? "shapes shape-box-2 current"
-                        : "shapes shape-box-2"
-                    }
-                  ></span>
-
-                  <span
-                    className={
-                      activeShape == 3
-                        ? "shapes shape-box-3 current"
-                        : "shapes shape-box-3"
-                    }
-                  ></span>
-
-                  <span
-                    className={
-                      activeShape == 4
-                        ? "shapes shape-box-4 current"
-                        : "shapes shape-box-4"
-                    }
-                  ></span>
+                  {TESTIMONALS?.map((_, index) => (
+                    <span
+                      className={
+                        activeShape == index + 1
+                          ? `shapes shape-box-${index + 1} current`
+                          : `shapes shape-box-${index + 1}`
+                      }
+                    ></span>
+                  ))}
                 </div>
               </div>
               <div className="col-xxl-8 col-xl-8 col-lg-12 col-md-12">
                 <div className="service__list" ref={serviceList}>
-                  <Link
-                    href="/"
-                    className={activeList == 1 ? "active" : ""}
-                    data-service="1"
-                  >
-                    <div className="service__item animation_home1_service">
-                      <div className="service__number">
-                        <span>01</span>
+                  {TESTIMONALS?.map((testimonal, index) => (
+                    <Link
+                      href="/"
+                      className={activeList == index + 1 ? "active" : ""}
+                      data-service={`${index + 1}`}
+                    >
+                      <div className="service__item animation_home1_service">
+                        <div className="service__number">
+                          <span>
+                            {index + 1 < 10 ? "0" + (index + 1) : index + 1}
+                          </span>
+                        </div>
+                        <div className="service__title-wrapper">
+                          <h4 className="service__title">{testimonal?.name}</h4>
+                        </div>
+                        <div className="service__text">
+                          <p>{testimonal.description}</p>
+                        </div>
+                        <div className="service__link">
+                          <p>
+                            {/* <i className="fa-solid fa-arrow-left"></i> */}
+                            <i class="fa-solid fa-quote-right"></i>
+                          </p>
+                        </div>
                       </div>
-                      <div className="service__title-wrapper">
-                        <h4 className="service__title">
-                          Web & Mobile Development
-                        </h4>
-                      </div>
-                      <div className="service__text">
-                        <p>
-                          We create, products, brands, apps & websites for the
-                          companies all around the world class digital products
-                        </p>
-                      </div>
-                      <div className="service__link">
-                        <p>
-                          <i className="fa-solid fa-arrow-right"></i>
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-
-                  <Link
-                    href="/"
-                    className={activeList == 2 ? "active" : ""}
-                    data-service="2"
-                  >
-                    <div className="service__item  animation_home1_service">
-                      <div className="service__number">
-                        <span>02</span>
-                      </div>
-                      <div className="service__title-wrapper">
-                        <h4 className="service__title">
-                          Interaction <br />
-                          Design
-                        </h4>
-                      </div>
-                      <div className="service__text">
-                        <p>
-                          We create, products, brands, apps & websites for the
-                          companies all around the world class digital products
-                        </p>
-                      </div>
-                      <div className="service__link">
-                        <p>
-                          {/* <i className="fa-solid fa-arrow-right"></i> */}
-
-                          <i className="fa-solid fa-arrow-right"></i>
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-
-                  <Link
-                    href="/"
-                    className={activeList == 3 ? "active" : ""}
-                    data-service="3"
-                  >
-                    <div className="service__item  animation_home1_service">
-                      <div className="service__number">
-                        <span>03</span>
-                      </div>
-                      <div className="service__title-wrapper">
-                        <h4 className="service__title">
-                          Digital <br />
-                          Maketing
-                        </h4>
-                      </div>
-                      <div className="service__text">
-                        <p>
-                          We create, products, brands, apps & websites for the
-                          companies all around the world class digital products
-                        </p>
-                      </div>
-                      <div className="service__link">
-                        <p>
-                          <i className="fa-solid fa-arrow-right"></i>
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-
-                  <Link
-                    href="/"
-                    className={activeList == 4 ? "active" : ""}
-                    data-service="4"
-                  >
-                    <div className="service__item  animation_home1_service">
-                      <div className="service__number">
-                        <span>04</span>
-                      </div>
-                      <div className="service__title-wrapper">
-                        <h4 className="service__title">
-                          Branding and Strategy
-                        </h4>
-                      </div>
-                      <div className="service__text">
-                        <p>
-                          We create, products, brands, apps & websites for the
-                          companies all around the world class digital products
-                        </p>
-                      </div>
-                      <div className="service__link">
-                        <p>
-                          <i className="fa-solid fa-arrow-right"></i>
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
@@ -372,76 +253,16 @@ const ServiceElementV2 = () => {
                     className="testimonial__slider-3"
                   >
                     <div className="swiper-wrapper">
-                      <SwiperSlide>
-                        <div className="testimonial__slide-3">
-                          <p>
-                            When we talk about Alts, we do not mean a typical
-                            business partner, but rather a team that
-                            collaborates with us daily, always there for us when
-                            we encounter difficulties and celebrate
-                            achievements. We see in Alts our best ally for
-                            success!
-                          </p>
-                          <h2 className="client__name-3">Maria D. Halk</h2>
-                          <h3 className="client__role-3">Managing Director</h3>
-                        </div>
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <div className="testimonial__slide-3">
-                          <p>
-                            When we talk about Alts, we do not mean a typical
-                            business partner, but rather a team that
-                            collaborates with us daily, always there for us when
-                            we encounter difficulties and celebrate
-                            achievements. We see in Alts our best ally for
-                            success!
-                          </p>
-                          <h2 className="client__name-3">Maria D. Halk</h2>
-                          <h3 className="client__role-3">Managing Director</h3>
-                        </div>
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <div className="testimonial__slide-3">
-                          <p>
-                            When we talk about Alts, we do not mean a typical
-                            business partner, but rather a team that
-                            collaborates with us daily, always there for us when
-                            we encounter difficulties and celebrate
-                            achievements. We see in Alts our best ally for
-                            success!
-                          </p>
-                          <h2 className="client__name-3">Maria D. Halk</h2>
-                          <h3 className="client__role-3">Managing Director</h3>
-                        </div>
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <div className="testimonial__slide-3">
-                          <p>
-                            When we talk about Alts, we do not mean a typical
-                            business partner, but rather a team that
-                            collaborates with us daily, always there for us when
-                            we encounter difficulties and celebrate
-                            achievements. We see in Alts our best ally for
-                            success!
-                          </p>
-                          <h2 className="client__name-3">Maria D. Halk</h2>
-                          <h3 className="client__role-3">Managing Director</h3>
-                        </div>
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <div className="testimonial__slide-3">
-                          <p>
-                            When we talk about Alts, we do not mean a typical
-                            business partner, but rather a team that
-                            collaborates with us daily, always there for us when
-                            we encounter difficulties and celebrate
-                            achievements. We see in Alts our best ally for
-                            success!
-                          </p>
-                          <h2 className="client__name-3">Maria D. Halk</h2>
-                          <h3 className="client__role-3">Managing Director</h3>
-                        </div>
-                      </SwiperSlide>
+                      {TESTIMONALS?.map((testimonal) => (
+                        <SwiperSlide key={testimonal?.name}>
+                          <div className="testimonial__slide-3">
+                            <p>{testimonal?.description}</p>
+                            <h2 className="client__name-3">
+                              {testimonal.name}
+                            </h2>
+                          </div>
+                        </SwiperSlide>
+                      ))}
                     </div>
                     <div
                       style={{ cursor: "pointer" }}

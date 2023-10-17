@@ -1,7 +1,7 @@
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import AHA from "../../../public/assets/imgs/Home/Portfolio/AHA.png";
-import DORADO from "../../../public/assets/imgs/Home/Portfolio/DORADO.png";
+import TRANQ from "../../../public/assets/imgs/Home/Portfolio/TRANQ.png";
 import TradeKode from "../../../public/assets/imgs/Home/Portfolio/TradeKode.png";
 import Image from "next/image";
 
@@ -19,21 +19,24 @@ const PORTFOLIO = [
     title: "AHA",
     image: AHA,
     link: "/",
-    description: "Agriculture and Horticulture",
+    description:
+      "The AHA app offers artists and art enthusiasts an exceptional user experience by amalgamating art-related services and income opportunities on a unified platform. Flexile Sol partnered with AHA to develop a business-to-consumer (B2C) app available on both Android and iOS platforms.",
   },
 
   {
-    title: "Dorado",
-    image: DORADO,
+    title: "Tranq",
+    image: TRANQ,
     link: "/",
-    description: "Agriculture and Horticulture",
+    description:
+      "TranQuility WorldWide, Inc. aims to make starting, operating and expanding a business for success easier for entrepreneurs and enterprises. Whether you're new to entrepreneurship, just started your business or have an MBA.",
   },
 
   {
     title: "Trade Kode",
     image: TradeKode,
     link: "/",
-    description: "Agriculture and Horticulture",
+    description:
+      "Trade Kode is your all-in-one crypto exchange, offering a user-friendly platform for buying, selling, and trading a wide variety of cryptocurrencies. Our features are designed to enhance your trading experience, ensuring you have the tools you need for success.",
   },
 ];
 

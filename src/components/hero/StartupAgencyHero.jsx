@@ -35,17 +35,18 @@ const StartupAgencyHero = () => {
           type: "chars words",
         });
 
+        gsap.from(
+          split_hero6_desc.words,
+          { x: 50, autoAlpha: 0, duration: 1, stagger: 0.05 },
+          "-=1"
+        );
         gsap.from(split_hero6_title.chars, {
           duration: 1,
           x: 70,
           autoAlpha: 0,
           stagger: 0.1,
         });
-        gsap.from(
-          split_hero6_desc.words,
-          { duration: 1, x: 50, autoAlpha: 0, stagger: 0.05 },
-          "-=1"
-        );
+
         gsap.to(
           heroAnchor.current,
           { opacity: 1, y: 0, duration: 1, ease: "power2.out" },
@@ -81,13 +82,13 @@ const StartupAgencyHero = () => {
                   src={ArrowIcon}
                   alt="Arrow Icon"
                 />
+
                 <h1 className="hero__title-6 " ref={heroTitle}>
-                  Magical <br /> Axtra Startup Solution{" "}
+                  CUSTOM <br /> APPLICATION <br /> DEVELOPMENT <br /> SERVICES
                 </h1>
-                <p ref={heroText}>
-                  Our team always reviews all previous methods with <br />{" "}
-                  models, and processes to determined
-                </p>
+
+                <p ref={heroText}>Where Innovation Meets Implementation.</p>
+
                 <div className="btn_wrapper">
                   <Link
                     className="wc-btn-primary btn-hover btn-item"

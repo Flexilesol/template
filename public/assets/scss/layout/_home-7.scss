@@ -765,7 +765,6 @@
   &__items-7 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     @media #{$sm} {
       grid-template-columns: 1fr;
     }
@@ -1128,6 +1127,7 @@
       a {
         border-color: var(--secondary);
       }
+      padding-bottom: 20px;
     }
 
     &__item-7 {

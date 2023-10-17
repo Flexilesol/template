@@ -15,6 +15,7 @@ const CONTENT = [
     title: "Consulting",
     number: "01",
     body: `Prepare for a tech adventure infused with Flexile Sol's enchanting touch. Our tech wizards stand ready to craft an IT strategy that harmonizes seamlessly with your business objectives.`,
+    tags: [{}],
   },
   {
     eventKey: "1",
@@ -152,7 +153,7 @@ const StartupAgencyService = () => {
                             <Accordion.Body className="accordion-body">
                               <p>{item?.body}</p>
 
-                              <div className="accordion-body_tags">
+                              {/* <div className="accordion-body_tags">
                                 <div className="accordion-body_tags-item">
                                   <Image
                                     src={MobileIcon}
@@ -174,7 +175,7 @@ const StartupAgencyService = () => {
 
                                   <span>Mobile Development</span>
                                 </div>
-                              </div>
+                              </div> */}
                             </Accordion.Body>
                           </Accordion.Item>
                         ))}

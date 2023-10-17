@@ -441,7 +441,7 @@
 
   &__item {
     display: grid;
-    grid-template-columns: 0.7fr 2fr 2.5fr 1fr;
+    grid-template-columns: 0.7fr 1.75fr 3.25fr .5fr;
     align-items: center;
     padding: 35px 0;
     border-bottom: 1px solid var(--secondary);
@@ -754,7 +754,7 @@
   }
 
   &__text {
-    max-width: 320px;
+    // max-width: 320px;
 
     p {
       color: var(--gray-2);
@@ -777,7 +777,7 @@
 
       &::after {
         position: absolute;
-        content: "\f061";
+        content: "\f10e";
         font-family: "Font Awesome 6 Free";
         font-weight: 900;
         left: -20px;

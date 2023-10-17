@@ -3,11 +3,16 @@ import animationCharCome from "@/lib/utils/animationCharCome";
 import animationWordCome from "@/lib/utils/animationWordCome";
 import { useEffect, useRef, useState } from "react";
 import _ from "lodash";
+import { Alert, Spinner, Toast, ToastContainer } from "react-bootstrap";
 
 const Contact1 = () => {
   const charAnim = useRef();
   const wordAnim = useRef();
 
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertType, setAlertTtype] = useState("success");
+  const [alertMessage, setAlertMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -82,6 +87,7 @@ const Contact1 = () => {
     e?.preventDefault();
 
     if (_validate()) {
+      setIsLoading(true);
       const data = {
         name: name,
         email: email,
@@ -96,7 +102,34 @@ const Contact1 = () => {
         headers: {
           "Content-Type": "application/json",
         },
-      });
+      })
+        .then(() => {
+          setName("");
+          setEmail("");
+          setPhone("");
+          setSubject("");
+          setMessage("");
+          setIsLoading(false);
+          setShowAlert(true);
+          setAlertTtype("success");
+          setAlertMessage("Your message has been sent successfully.");
+
+          setTimeout(() => {
+            setShowAlert(false);
+            setAlertMessage("");
+          }, 2000);
+        })
+        .catch(() => {
+          setIsLoading(false);
+          setShowAlert(true);
+          setAlertTtype("danger");
+          setAlertMessage("Something went wrong. Please try again.");
+
+          setTimeout(() => {
+            setShowAlert(false);
+            setAlertMessage("");
+          }, 2000);
+        });
     }
   };
 
@@ -247,12 +280,33 @@ const Contact1 = () => {
                       )}
                     </div>
                   </div>
+                  {showAlert && (
+                    <>
+                      {alertType === "success" && (
+                        <Alert variant={"success"}>{alertMessage}</Alert>
+                      )}
+
+                      {alertType === "danger" && (
+                        <Alert variant={"danger"}>{alertMessage}</Alert>
+                      )}
+                    </>
+                  )}
                   <div className="row g-3">
                     <div className="col-12">
                       <div className="btn_wrapper">
                         <button className="wc-btn-primary btn-hover btn-item">
-                          <span></span> Send <br />
-                          Messages <i className="fa-solid fa-arrow-right"></i>
+                          {isLoading ? (
+                            <>
+                              <span></span>
+                              <Spinner animation="grow" color="#efefef" />
+                            </>
+                          ) : (
+                            <>
+                              <span></span> Send <br />
+                              Messages{" "}
+                              <i className="fa-solid fa-arrow-right"></i>
+                            </>
+                          )}
                         </button>
                       </div>
                     </div>

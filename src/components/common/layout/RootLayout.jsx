@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 import allNavData from "../../../data/navData.json";
 import Preloader from "@/components/preloader/Preloader";
 import CommonAnimation from "../CommonAnimation";
@@ -97,6 +98,10 @@ export default function RootLayout({
             <FooterContent footer={footer} />
           </div>
         </div>
+        <TawkMessengerReact
+          propertyId="652e69cda84dd54dc4820c90"
+          widgetId="1hcukqiuf"
+        />
       </CommonAnimation>
     </>
   );

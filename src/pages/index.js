@@ -16,8 +16,11 @@ const CreativeAgencyDark = () => {
   return (
     <div>
       <Head>
-        <title>Creative Agency Dark</title>
-        <meta name="description" content="Creative Agency Dark Description" />
+        <title>Flexile Sol</title>
+        <meta
+          name="description"
+          content="Flexible Solutions for an Ever-Changing World. Empower your business with a reliable custom application development company. Experience innovative solutions with our custom application development services"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
