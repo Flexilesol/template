@@ -177,6 +177,7 @@ const ServiceElementV2 = () => {
                 <div className="service__img-wrapper">
                   {TESTIMONALS?.map((testimonal, index) => (
                     <Image
+                      key={testimonal?.name}
                       priority
                       width={280}
                       style={{ height: "auto" }}
@@ -192,6 +193,7 @@ const ServiceElementV2 = () => {
 
                   {TESTIMONALS?.map((_, index) => (
                     <span
+                      key={index}
                       className={
                         activeShape == index + 1
                           ? `shapes shape-box-${index + 1} current`
@@ -208,6 +210,7 @@ const ServiceElementV2 = () => {
                       href="/"
                       className={activeList == index + 1 ? "active" : ""}
                       data-service={`${index + 1}`}
+                      key={testimonal?.name}
                     >
                       <div className="service__item animation_home1_service">
                         <div className="service__number">
